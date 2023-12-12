@@ -1,7 +1,7 @@
-package UserPackage;
+package com.example.oopproject.UserPackage;
 
-import UserPackage.enums.FamilyStatus;
-import UserPackage.enums.Gender;
+import com.example.oopproject.UserPackage.enums.FamilyStatus;
+import com.example.oopproject.UserPackage.enums.Gender;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -15,6 +15,7 @@ public abstract class User implements Serializable{
     protected String phoneNumber;
     protected Gender gender;
     protected FamilyStatus familyStatus;
+
     public User(Long id, String email, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus) {
         this.id = id;
         this.email = email;
@@ -24,6 +25,11 @@ public abstract class User implements Serializable{
         this.phoneNumber = phoneNumber;
         this.gender = gender;
         this.familyStatus = familyStatus;
+    }
+    public abstract String getView();
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
     public Long getId() {
