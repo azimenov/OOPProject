@@ -6,6 +6,11 @@ import java.util.Vector;
 public class Manager {
 	private Vector<Manager> listManager;
 	private List<Message> requests;
+	private News newsManager;
+
+    public Manager() {
+        this.newsManager = new News();
+    }
 	
 	
 	public Vector<Manager> getListManager() {
@@ -27,16 +32,15 @@ public class Manager {
 	
 		
 
-	public void getTeacherInfo() {
-        // Логика получения информации о преподавателях
-        // ...
-        System.out.println("Getting teacher information...");
+	public void getTeacherInfo(Teacher teacher) {
+        String teacherInfo = teacher.getTeacherInformation();
+        System.out.println("Getting teacher information: " + teacherInfo);
+        // Дополнительная логика, если необходимо
     }
 
-    public void getStudentInfo() {
-        // Логика получения информации о студентах
-        // ...
-        System.out.println("Getting student information...");
+    public void getStudentInfo(Student student) {
+    	String studentInfo = student.getStudentInfo();
+    	System.out.println("Getting student information:"+ studentInfo);
     }
 
     public void getReport() {
@@ -45,22 +49,36 @@ public class Manager {
         System.out.println("Generating report...");
     }
 
-    public void getStudentsRequests() {
-        // Логика получения запросов от студентов
-        // ...
-        System.out.println("Getting students' requests...");
+    public void getStudentsRequests(Student student, Request request) {
+        String studentRequestInfo = "Student: " + student.getName() + ", ID: " + student.getId() +
+                                    "\nRequest Details: " + request.getRequestDetails();
+
+        System.out.println("Getting students' requests:\n" + studentRequestInfo);
+       
     }
 
-    public void getStudentFinanceInfo() {
-        // Логика получения финансовой информации студента
-        // ...
-        System.out.println("Getting student finance information...");
+    public void getStudentFinanceInfo(Student student) {
+        String financeInfo = student.viewFinancialInfo();
+        System.out.println("Getting student finance information:\n" + financeInfo);
+       
     }
 
-    public void manageNews() {
-        // Логика управления новостями
-        // ...
-        System.out.println("Managing news...");
+    public void manageNews(String news, boolean add) {
+        if (add) {
+            newsManager.addNews(news);
+            System.out.println("News added: " + news);
+        } else {
+            newsManager.removeNews(news);
+            System.out.println("News removed: " + news);
+        }
+    }
+
+    public void displayAllNews() {
+        List<String> allNews = newsManager.getNewsList();
+        System.out.println("All News:");
+        for (String news : allNews) {
+            System.out.println(news);
+        }
     }
 
 }
