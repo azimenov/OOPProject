@@ -26,6 +26,11 @@ public abstract class User implements Serializable{
         this.gender = gender;
         this.familyStatus = familyStatus;
     }
+
+    public User() {
+
+    }
+
     public abstract String getView();
     public User(String email, String password) {
         this.email = email;

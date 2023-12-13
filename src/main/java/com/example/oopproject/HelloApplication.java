@@ -1,13 +1,12 @@
 package com.example.oopproject;
 
-import com.example.oopproject.StudentPackage.Bachelor;
+import com.example.oopproject.student.Bachelor;
 import com.example.oopproject.UserPackage.User;
 import com.example.oopproject.db.Admin;
 import com.example.oopproject.db.DataBase;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.chart.PieChart;
 import javafx.stage.Stage;
 
 import java.io.IOException;

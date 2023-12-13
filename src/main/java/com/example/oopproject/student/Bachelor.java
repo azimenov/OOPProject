@@ -1,4 +1,4 @@
-package com.example.oopproject.StudentPackage;
+package com.example.oopproject.student;
 
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
