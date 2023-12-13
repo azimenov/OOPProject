@@ -3,6 +3,9 @@ package manager;
 class Request extends Message {
 	
     private boolean executed;
+    private String requestDetails; 
+    
+   
 
 	public boolean getExecuted() {
 		return executed;
@@ -12,5 +15,13 @@ class Request extends Message {
 		this.executed = executed;
 	}
 
+	public String getRequestDetails() {
+		return requestDetails;
+	}
+
+	public void setRequestDetails(String requestDetails) {
+		this.requestDetails = requestDetails;
+	}
+	
  
 }
