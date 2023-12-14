@@ -1,4 +1,4 @@
-package com.example.oopproject.student;
+package com.example.oopproject.student.enums;
 
 public enum GradeLetter {
 	    A_MINUS,
@@ -10,5 +10,4 @@ public enum GradeLetter {
 	    C_MINUS,
 	    D,
 	    F;
-
 }

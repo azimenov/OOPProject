@@ -1,26 +1,24 @@
-package manager;
+package com.example.oopproject.ManagerPackege;
+
+import com.example.oopproject.Employee.Employee;
+import com.example.oopproject.TeacherPackage.Teacher;
+import com.example.oopproject.UserPackage.enums.Role;
+import com.example.oopproject.db.DataBase;
+import com.example.oopproject.student.Student;
 
 import java.util.List;
-import java.util.Vector;
 
-public class Manager {
-	private Vector<Manager> listManager;
-	private List<Message> requests;
-	private News newsManager;
+public class Manager extends Employee {
+	protected List<Message> requests;
+	protected News newsManager;
+    protected final DataBase db;
 
-    public Manager() {
-        this.newsManager = new News();
+    public Manager(String email, String password, Role role, DataBase db){
+        super(email, password, role);
+        this.db = db;
     }
-	
-	
-	public Vector<Manager> getListManager() {
-		return listManager;
-	}
-	
-	public void setListManager(Vector<Manager> listManager) {
-		this.listManager = listManager;
-	}
-	
+
+
 	public List<Message> getRequests() {
 		return requests;
 	}
@@ -28,18 +26,15 @@ public class Manager {
 	public void setRequests(List<Message> requests) {
 		this.requests = requests;
 	}
-	
-	
-		
 
 	public void getTeacherInfo(Teacher teacher) {
-        String teacherInfo = teacher.getTeacherInformation();
+        String teacherInfo = teacher.toString();
         System.out.println("Getting teacher information: " + teacherInfo);
         // Дополнительная логика, если необходимо
     }
 
     public void getStudentInfo(Student student) {
-    	String studentInfo = student.getStudentInfo();
+    	String studentInfo = student.toString();
     	System.out.println("Getting student information:"+ studentInfo);
     }
 
@@ -50,7 +45,7 @@ public class Manager {
     }
 
     public void getStudentsRequests(Student student, Request request) {
-        String studentRequestInfo = "Student: " + student.getName() + ", ID: " + student.getId() +
+        String studentRequestInfo = "Student: " + student.getFirstName() +student.getLastName()+ ", ID: " + student.getId() +
                                     "\nRequest Details: " + request.getRequestDetails();
 
         System.out.println("Getting students' requests:\n" + studentRequestInfo);
@@ -60,7 +55,6 @@ public class Manager {
     public void getStudentFinanceInfo(Student student) {
         String financeInfo = student.viewFinancialInfo();
         System.out.println("Getting student finance information:\n" + financeInfo);
-       
     }
 
     public void manageNews(String news, boolean add) {
@@ -85,7 +79,6 @@ public class Manager {
     @Override
     public String toString() {
         return "Manager{" +
-                "listManager=" + listManager +
                 ", requests=" + requests +
                 ", newsManager=" + newsManager +
                 '}';

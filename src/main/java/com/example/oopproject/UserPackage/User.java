@@ -1,10 +1,14 @@
 package com.example.oopproject.UserPackage;
 
+import com.example.oopproject.Courses.ActivatedCourses;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
+import com.example.oopproject.UserPackage.enums.Role;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Scanner;
+import java.util.Vector;
 
 public abstract class User implements Serializable{
     protected Long id;
@@ -15,7 +19,8 @@ public abstract class User implements Serializable{
     protected String phoneNumber;
     protected Gender gender;
     protected FamilyStatus familyStatus;
-
+    protected Vector<Role> roles;
+    protected Vector<ActivatedCourses> courses;
     public User(Long id, String email, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus) {
         this.id = id;
         this.email = email;
@@ -26,12 +31,37 @@ public abstract class User implements Serializable{
         this.gender = gender;
         this.familyStatus = familyStatus;
     }
-
+    public User(String email ,String password, Role role){
+        this.email = email;
+        this.password = password;
+        roles = new Vector<Role>();
+        roles.add(role);
+    }
     public User() {
 
     }
+    public void registerCourse(ActivatedCourses enrolledCourses){
+        courses.add(enrolledCourses);
+    }
+    public abstract void getView();
 
-    public abstract String getView();
+    public Role chooseRole(){
+        if(roles.size()>1){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("In which acc you want to sign in: ");
+            int n = 1;
+            for(Role role: roles){
+                System.out.print(n + " ");
+                System.out.print(role + " ");
+            }
+            int option = sc.nextInt();
+            return roles.elementAt(option - 1);
+        }
+        else{
+            System.out.println("Your role is" + roles.elementAt(0));
+            return roles.elementAt(0);
+        }
+    }
     public User(String email, String password) {
         this.email = email;
         this.password = password;

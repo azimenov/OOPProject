@@ -1,5 +1,7 @@
 package com.example.oopproject.student;
 
+import com.example.oopproject.student.enums.GradeLetter;
+
 import java.util.HashMap;
 import java.util.Map;
 

@@ -1,4 +1,7 @@
-package com.example.oopproject.student;
+package com.example.oopproject.student.StudentTypes;
+
+import com.example.oopproject.student.enums.Faculty;
+import com.example.oopproject.student.enums.Organization;
 
 class Phd extends GraduateStudent {
 	 public Phd(Faculty faculty, int yearOfStudy, Organization member) {
@@ -13,4 +16,4 @@ class Phd extends GraduateStudent {
 	 public void createResearcher() {
 	    
 	 }
-	}
+}

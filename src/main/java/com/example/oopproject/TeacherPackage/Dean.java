@@ -1,5 +1,8 @@
 package com.example.oopproject.TeacherPackage;
 
+import com.example.oopproject.student.Course;
+import com.example.oopproject.student.Student;
+
 public class Dean extends Teacher {
     private EducationDirection educationDirection;
     public Dean(TeacherType teacherType, EducationDirection educationDirection) {

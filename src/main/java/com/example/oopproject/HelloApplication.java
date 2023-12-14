@@ -1,54 +1,59 @@
 package com.example.oopproject;
 
-import com.example.oopproject.student.Bachelor;
+import com.example.oopproject.ManagerPackege.Manager;
+import com.example.oopproject.ManagerPackege.ORManager;
+import com.example.oopproject.ManagerPackege.SchoolManager;
+import com.example.oopproject.TeacherPackage.Teacher;
+import com.example.oopproject.UserPackage.enums.Role;
+import com.example.oopproject.student.Course;
+import com.example.oopproject.student.StudentTypes.Bachelor;
 import com.example.oopproject.UserPackage.User;
 import com.example.oopproject.db.Admin;
-import com.example.oopproject.db.DataBase;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.util.Scanner;
 
-public class HelloApplication extends Application {
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
-    }
+public class HelloApplication {
 
     public static void main(String[] args) {
-        Admin admin = new Admin(new DataBase());
-        admin.addUser(new Bachelor("dynastymm9@gmail.com", "qwerty"));
-        admin.addUser(new Bachelor("azimenovm@gmail.com", "qwerty"));
-        admin.addUser(new Bachelor("qwerty@gmail.com", "qwerty"));
-        admin.addUser(new Bachelor("margulan@gmail.com", "qwerty"));
 
+        Admin admin = new Admin();
 
-        System.out.println("Write email, and password");
-        System.out.print("email:");
-        Scanner sc = new Scanner(System.in);
-        String email = sc.next();
-        System.out.print("password:");
-        String password = sc.next();
+        admin.addUser(new Bachelor("m_azimenov@kbtu.kz", "A2f3r5", Role.Bachelor));
+        admin.addUser(new Bachelor("k_yesirkepova@kbtu.kz", "A2f3r5", Role.Bachelor));
+        admin.addUser(new Bachelor("a_oralkhan@kbtu.kz", "A2f3r5", Role.Bachelor));
+        admin.addUser(new Bachelor("d_djakupov@kbtu.kz", "A2f3r5", Role.Bachelor));
 
-        User user = admin.sendRequest(email, password);
-        while(user!=null){
-            System.out.println(user instanceof Bachelor);
-            System.out.println(user.getView());
-            int option = sc.nextInt();
+        admin.addUser(new Teacher("n_ganiev@kbtu.kz", "qwerty123", Role.Teacher));
+        admin.addUser(new ORManager("a_aboba@kbtu.kz", "qwerty123", Role.SchoolManager, admin.getDB()));
+        admin.addUser(new SchoolManager("b_aboba@kbtu.kz", "qwerty123", Role.OrManager, admin.getDB()));
 
-            if(option == 1){
-                user = (Bachelor)user;
-                System.out.print(((Bachelor) user).getSchedule());
-            }
-            else if(option == 2){
-                user = null;
+        admin.addCourse(new Course("OOP", "1"));
+        boolean closed = false;
+        while(!closed){
+            Scanner sc = new Scanner(System.in);
+            System.out.print("write email:");
+            String email = sc.next();
+            System.out.print("write password: ");
+            String password = sc.next();
+            User user = admin.userLogIn(email, password);
+            if(user != null){
+                Role role = user.chooseRole();
+                if(role == Role.Bachelor){
+                    Bachelor student = (Bachelor)user;
+                    student.getView();
+                }
+                else if(role == Role.SchoolManager){
+                    Manager schoolManager = (Manager) user;
+                    schoolManager.getView();
+                }
+                else if(role == Role.OrManager){
+                    Manager orManager= (Manager) user;
+                    orManager.getView();
+                }
+                else if(role == Role.Teacher){
+                    Teacher teacher = (Teacher) user;
+                    teacher.getView();
+                }
             }
         }
     }

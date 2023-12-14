@@ -1,4 +1,4 @@
-package manager;
+package com.example.oopproject.ManagerPackege;
 
 public class Message {
 	private String theme;
