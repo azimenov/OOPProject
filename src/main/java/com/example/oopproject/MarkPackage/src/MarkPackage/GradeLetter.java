@@ -1,4 +1,4 @@
-package com.example.oopproject.mark;
+package com.example.oopproject.MarkPackage.enums;
 
 public enum GradeLetter {
 	    A_MINUS,
