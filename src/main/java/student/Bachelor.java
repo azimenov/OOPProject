@@ -4,7 +4,6 @@ class Bachelor extends Student {
 	     super(faculty, yearOfStudy, member);
 	 }
 
-	 
 	 public void protectionOfTheDiploma() {
 	     
 	 }

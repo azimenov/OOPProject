@@ -1,10 +1,20 @@
 package com.example.oopproject.TeacherPackage;
 
-public abstract class Teacher extends Employee{
+import java.util.ArrayList;
+import java.util.List;
+
+import student.Course;
+import student.GradeLetter;
+import student.Student;
+
+public abstract class Teacher extends Employee {
+
     private TeacherType teacherType;
+    private List<Course> coursesTeaching;
 
     public Teacher(TeacherType teacherType) {
         this.teacherType = teacherType;
+        this.coursesTeaching = new ArrayList<>();
     }
 
     public TeacherType getTeacherType() {
@@ -15,25 +25,45 @@ public abstract class Teacher extends Employee{
         this.teacherType = teacherType;
     }
 
-    public void putMark() {
-        //TODO
-        return null;
+    public List<Course> getCoursesTeaching() {
+        return coursesTeaching;
     }
 
-    public void putAttendence() {
-        //TODO
-        return null;
+    public void addCourseToTeach(Course course) {
+        coursesTeaching.add(course);
     }
 
-    public void viewCourses(Course course){
-        return course;
+    public void putMark(Student student, Course course, double mark) {
+        // Logic to assign a mark to a student for a particular course
+        student.addMark(course, mark);
     }
 
-    public void uploadFiles(){}
+    public void putAttendance(Student student, Course course, boolean present) {
+        // Logic to mark student attendance for a particular course
+        student.markAttendance(course, present);
+    }
 
-    public void sendComplainToDean(){}
+    public void viewCourses() {
+        // Displaying courses being taught by this teacher
+        for (Course course : coursesTeaching) {
+            System.out.println("Teaching: " + course.getName());
+        }
+    }
+
+    public void uploadFiles() {
+        // Logic to upload files
+        // Implementation here
+    }
+
+    public void sendComplainToDean() {
+        // Logic to send a complaint to the dean
+        // Implementation here
+    }
+
     public void viewTeacherSchedules() {
-        //TODO
-        return null;
+        // Logic to view teacher's schedules
+        // Implementation here
     }
+
+    // Additional methods or overrides can be added here as needed
 }

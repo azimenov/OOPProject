@@ -1,13 +1,12 @@
 package com.example.oopproject.TeacherPackage;
 
-public class EducationDirection extends Teacher{
+public class EducationDirection extends Teacher {
+
     private String name;
-
     private String studies;
+    private String program;
 
-    private  programm;
-
-    public EducationDirection(TeacherType teacherType,String name, String studies) {
+    public EducationDirection(TeacherType teacherType, String name, String studies) {
         super(teacherType);
         this.name = name;
         this.studies = studies;
@@ -17,24 +16,24 @@ public class EducationDirection extends Teacher{
         return this.name;
     }
 
-    public String setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
-
 
     public String getStudies() {
         return this.studies;
     }
 
-    public String setStudies(String studies) {
+    public void setStudies(String studies) {
         this.studies = studies;
     }
 
-    public  getProgramm() {
-        return this.programm;
+    public String getProgram() {
+        return this.program;
     }
 
-    public  setProgramm(invalid programm) {
-        this.programm = programm;
+    public void setProgram(String program) {
+        this.program = program;
     }
 }
+

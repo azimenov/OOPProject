@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class Student {
+public class qqStudent {
  
  private Faculty faculty;
  private int yearOfStudy;
@@ -65,9 +65,10 @@ public class Student {
      this.transcript = transcript;
  }
 
- 
- public void register(Course course) {
-   
+
+ public void registerForCourse(Teacher teacher, Course course) {
+        teacher.addCourseToTeach(course);
+        addCourse(course);
  }
 
  public String getTeacherInfo(Teacher teacher) {

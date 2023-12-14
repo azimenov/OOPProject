@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a90a74be-22a6-4b8e-94d5-afef4476917a" name="Changes" comment="User Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/StudentPackage/Bachelor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/StudentPackage/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/enums/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserPackage/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserPackage/enums/FamilyStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/enums/FamilyStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserPackage/enums/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/enums/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Dean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Dean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/EducationDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/EducationDirection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/student/Bachelor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/student/Bachelor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/student/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/student/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/student/Semester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Semester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/student/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/student/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,14 +23,31 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;baimanbk&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6c951b5f-c9f3-4e8e-b3d0-77786ea552d3" />
+        <option name="url" value="https://github.com/azimenov/OOPProject" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2ZLc2ogxLIP0dy3KCGuQlZdz6CE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -46,16 +62,20 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.oopproject" />
+      <recent name="" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -68,6 +88,10 @@
       <updated>1702204596490</updated>
       <workItem from="1702204597612" duration="1283000" />
       <workItem from="1702205921211" duration="6468000" />
+      <workItem from="1702378867157" duration="1380000" />
+      <workItem from="1702448948877" duration="5669000" />
+      <workItem from="1702547102357" duration="3382000" />
+      <workItem from="1702554811589" duration="168000" />
     </task>
     <task id="LOCAL-00001" summary="User Commit">
       <option name="closed" value="true" />
@@ -77,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702206020496</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="User Commit">
+      <option name="closed" value="true" />
+      <created>1702456258934</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702456258934</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
