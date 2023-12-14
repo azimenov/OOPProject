@@ -1,6 +1,7 @@
 package manager;
 
 import java.util.List;
+
 import java.util.Vector;
 
 
@@ -33,18 +34,53 @@ public class ManagerDecorator extends Manager {
 		}
  
 	
-	 public void getTeacherInfo() {
-	}
-	 public void getStudentInfo() {
-	}
-	 public void getReport() {
-	}
-	 public void getStudentsRequests() {
-	}
-	 public void getStudentFinanceInfo() {
-	}
-	 public void manageNews() {
-	}
+	 @Override
+	    public void getTeacherInfo(Teacher teacher) {
+	        super.getTeacherInfo(teacher);
+	        
+	    }
+
+	    @Override
+	    public void getStudentInfo(Student student) {
+	        super.getStudentInfo(student);
+	       
+	    }
+
+	    @Override
+	    public void getReport() {
+	        super.getReport();
+	        
+	    }
+
+	    @Override
+	    public void getStudentsRequests(Student student, Request request) {
+	        super.getStudentsRequests(student, request);
+	       
+	    }
+
+	    @Override
+	    public void getStudentFinanceInfo(Student student) {
+	        super.getStudentFinanceInfo(student);
+	       
+	    }
+
+	    @Override
+	    public void manageNews(String news, boolean add) {
+	        super.manageNews(news, add);
+	       
+	    }
+
+	    @Override
+	    public void displayAllNews() {
+	        super.displayAllNews();
+	        
+	    }
+	 public String toString() {
+	        return "ManagerDecorator{" +
+	                "manager=" + manager +
+	                ", listManager=" + listManager +
+	                '}';
+	    }
 
 	
     
