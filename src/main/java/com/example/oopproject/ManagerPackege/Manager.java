@@ -80,5 +80,16 @@ public class Manager {
             System.out.println(news);
         }
     }
+    
+    
+    @Override
+    public String toString() {
+        return "Manager{" +
+                "listManager=" + listManager +
+                ", requests=" + requests +
+                ", newsManager=" + newsManager +
+                '}';
+    }
+   
 
 }
