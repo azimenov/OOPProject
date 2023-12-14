@@ -1,7 +1,8 @@
+package com.example.oopproject.MarkPackage;
 import com.example.oopproject.student.enums.GradeLetter;
 import com.example.oopproject.student.enums.Semester;
 import com.example.oopproject.student.Student;
-import com.example.oopproject.teacher.Teacher;
+import com.example.oopproject.TeacherPackage.Teacher;
 
 public class Mark {
     private GradeLetter grade; // Enum representing grade
