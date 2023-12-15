@@ -1,5 +1,5 @@
 package com.example.oopproject.ResearchPaper;
-package com.example.oopproject.ResearchPackage.ReseacrhPaper;
+
 import com.example.oopproject.ResearchPackage.enums.Format;
 
 import java.util.ArrayList;
