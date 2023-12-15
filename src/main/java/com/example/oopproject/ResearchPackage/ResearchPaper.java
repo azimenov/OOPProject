@@ -1,6 +1,6 @@
 package com.example.oopproject.ResearchPaper;
 
-import com.example.oopproject.ResearchPackage.enums.Format;
+import com.example.oopproject.ResearchPackage.enum.Format;
 
 import java.util.ArrayList;
 import java.util.List;
