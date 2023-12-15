@@ -10,6 +10,7 @@ class ResearchPaper {
     private String theme;
     private String fieldOfStudy;
     private String publisher;
+    private Format format; 
 
     public ResearchPaper(String title, String theme, String fieldOfStudy, String publisher) {
         this.title = title;
@@ -25,5 +26,12 @@ class ResearchPaper {
     public String getCitation() {
         
         return "";
+    }
+      public Format getFormat() {
+        return format;
+    }
+
+    public void setFormat(Format format) {
+        this.format = format;
     }
 }
