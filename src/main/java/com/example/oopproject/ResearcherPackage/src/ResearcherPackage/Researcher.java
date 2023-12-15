@@ -3,6 +3,8 @@ package com.example.oopproject.researcher;
 import com.example.oopproject.UserPackage.User;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
+import java.util.ArrayList;
+import java.util.List;
 
 class Researcher extends User{
     private String name;
