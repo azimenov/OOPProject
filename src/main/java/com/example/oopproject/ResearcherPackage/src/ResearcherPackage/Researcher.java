@@ -26,11 +26,11 @@ class Researcher extends User{
         this.project = project;
     }
 
-    public void publish(ResearchPaper paper) {
+    public void publish(ResearchPaper) {
         publications.add(paper);
     }
 
-    public void delete(ResearchPaper paper) {
+    public void delete(ResearchPaper) {
         publications.remove(paper);
     }
 }
