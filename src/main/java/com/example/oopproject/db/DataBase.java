@@ -41,14 +41,17 @@ public class DataBase implements Serializable {
         }
         enrolledCourses.add(course);
     }
-    public Teacher fingTeacherByEmail(String email){
+    public Teacher findTeacherByEmail(String email){
         if(enrolledCourses == null){
             enrolledCourses = new Vector<>();
         }
         return (Teacher) usersDatabase.stream().filter(student  -> student.getEmail().equals(email)).findFirst().orElse(null);
 
     }
-    public Student findBtEmail(String email){
+    public Employee findEmployeeByEmail(String email){
+        return employeeDatabase.stream().filter(employee -> employee.getEmail().equals(email)).findFirst().orElse(null);
+    }
+    public Student findStudentByEmail(String email){
         return (Student) usersDatabase.stream().filter(student -> student.getEmail().equals(email)).findFirst().orElse(null);
     }
     public ActivatedCourses findByCode(int code){

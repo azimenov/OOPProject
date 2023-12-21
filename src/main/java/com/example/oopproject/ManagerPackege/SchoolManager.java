@@ -1,6 +1,8 @@
 package com.example.oopproject.ManagerPackege;
 
 import com.example.oopproject.Courses.ActivatedCourses;
+import com.example.oopproject.UserPackage.enums.FamilyStatus;
+import com.example.oopproject.UserPackage.enums.Gender;
 import com.example.oopproject.UserPackage.enums.Role;
 import com.example.oopproject.db.DataBase;
 import com.example.oopproject.student.Course;
@@ -10,14 +12,14 @@ import java.util.Scanner;
 public class SchoolManager extends Manager{
 
 
-    public SchoolManager(String email, String password, Role role, DataBase db) {
-        super(email,  password,  role,  db);
+    public SchoolManager(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, int salary, DataBase dataBase) {
+        super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role, salary, dataBase);
     }
 
     public void assignCourseToTeacher(String email, int courseCode) {
         ActivatedCourses enrolledCourses = db.findByCode(courseCode);
-        enrolledCourses.setLecturer(db.fingTeacherByEmail(email));
-        db.fingTeacherByEmail(email).addCourse(enrolledCourses);
+        enrolledCourses.setLecturer(db.findTeacherByEmail(email));
+        db.findTeacherByEmail(email).addCourse(enrolledCourses);
     }
     public void assignCourseToTeacher(){
         System.out.print("Write teachers email:");

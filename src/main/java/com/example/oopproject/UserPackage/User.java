@@ -4,6 +4,7 @@ import com.example.oopproject.Courses.ActivatedCourses;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
 import com.example.oopproject.UserPackage.enums.Role;
+import com.example.oopproject.db.DataBase;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -11,7 +12,8 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public abstract class User implements Serializable{
-    protected Long id;
+    protected Scanner sc ;
+    protected String id;
     protected String email;
     protected String password;
     protected String firstName;
@@ -20,29 +22,25 @@ public abstract class User implements Serializable{
     protected Gender gender;
     protected FamilyStatus familyStatus;
     protected Vector<Role> roles;
-    protected Vector<ActivatedCourses> courses;
-    public User(Long id, String email, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus) {
+    protected DataBase db;
+
+    public User(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role) {
+        sc = new Scanner(System.in);
         this.id = id;
-        this.email = email;
+        email = firstName.toLowerCase().charAt(0) + "_" + lastName.toLowerCase() + "@kbtu.kz";
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.gender = gender;
         this.familyStatus = familyStatus;
-    }
-    public User(String email ,String password, Role role){
-        this.email = email;
-        this.password = password;
-        roles = new Vector<Role>();
+        if(roles == null) {
+            roles = new Vector<>();
+        }
         roles.add(role);
-    }
-    public User() {
 
     }
-    public void registerCourse(ActivatedCourses enrolledCourses){
-        courses.add(enrolledCourses);
-    }
+
     public abstract void getView();
 
     public Role chooseRole(){
@@ -67,10 +65,10 @@ public abstract class User implements Serializable{
         this.password = password;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

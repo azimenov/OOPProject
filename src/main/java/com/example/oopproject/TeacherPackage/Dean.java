@@ -1,18 +1,19 @@
 package com.example.oopproject.TeacherPackage;
 
+import com.example.oopproject.UserPackage.enums.FamilyStatus;
+import com.example.oopproject.UserPackage.enums.Gender;
+import com.example.oopproject.UserPackage.enums.Role;
+import com.example.oopproject.db.DataBase;
 import com.example.oopproject.student.Course;
 import com.example.oopproject.student.Student;
 
 public class Dean extends Teacher {
     private EducationDirection educationDirection;
-    public Dean(TeacherType teacherType, EducationDirection educationDirection) {
-        super(teacherType);
-        this.educationDirection = educationDirection;
+
+    public Dean(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, int salary, DataBase dataBase, TeacherType teacherType) {
+        super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role, salary, dataBase, teacherType);
     }
 
-    public void getComplaints() {
-
-    }
 
     public void viewOfEducationDirection() {
         if (educationDirection != null) {
@@ -26,22 +27,18 @@ public class Dean extends Teacher {
     }
 
 
-    @Override
     public void putMark(Student student, Course course, double mark) {
 
     }
 
-    @Override
     public void putAttendance(Student student, Course course, boolean present) {
 
     }
 
-    @Override
     public void viewCourses() {
 
     }
 
-    @Override
     public void viewTeacherSchedules() {
 
     }

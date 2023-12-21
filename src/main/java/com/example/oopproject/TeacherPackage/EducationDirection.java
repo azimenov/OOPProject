@@ -1,16 +1,20 @@
 package com.example.oopproject.TeacherPackage;
 
+import com.example.oopproject.UserPackage.enums.FamilyStatus;
+import com.example.oopproject.UserPackage.enums.Gender;
+import com.example.oopproject.UserPackage.enums.Role;
+import com.example.oopproject.db.DataBase;
+
 public class EducationDirection extends Teacher {
 
     private String name;
     private String studies;
     private String program;
 
-    public EducationDirection(TeacherType teacherType, String name, String studies) {
-        super(teacherType);
-        this.name = name;
-        this.studies = studies;
+    public EducationDirection(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, int salary, DataBase dataBase, TeacherType teacherType) {
+        super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role, salary, dataBase, teacherType);
     }
+
 
     public String getName() {
         return this.name;

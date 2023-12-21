@@ -4,6 +4,7 @@ import com.example.oopproject.Employee.Employee;
 import com.example.oopproject.UserPackage.User;
 import com.example.oopproject.student.Course;
 import com.example.oopproject.student.Student;
+import javafx.scene.chart.PieChart;
 
 import java.io.Serializable;
 import java.util.Vector;
@@ -14,8 +15,8 @@ public class Admin implements Serializable {
     public DataBase getDB(){
         return db;
     }
-    public Admin(){
-        db = new DataBase();
+    public Admin(DataBase db){
+        this.db = db;
     }
     public void addCourse(Course course){
         db.addCourse(course);

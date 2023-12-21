@@ -1,6 +1,6 @@
 package com.example.oopproject.MarkPackage.enums;
 
-public interface Semester {
+public enum Semester {
 	FALL, SPRING, SUMMER;
 
 }

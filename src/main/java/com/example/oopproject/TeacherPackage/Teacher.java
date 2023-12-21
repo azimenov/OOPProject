@@ -2,7 +2,10 @@ package com.example.oopproject.TeacherPackage;
 
 import com.example.oopproject.Courses.ActivatedCourses;
 import com.example.oopproject.Employee.Employee;
+import com.example.oopproject.UserPackage.enums.FamilyStatus;
+import com.example.oopproject.UserPackage.enums.Gender;
 import com.example.oopproject.UserPackage.enums.Role;
+import com.example.oopproject.db.DataBase;
 import com.example.oopproject.student.Course;
 import com.example.oopproject.student.Student;
 
@@ -13,55 +16,44 @@ public class Teacher extends Employee {
     private TeacherType teacherType;
     private Vector<ActivatedCourses> courses;
 
-    public Teacher(TeacherType teacherType) {
-        super();
+    public Teacher(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, int salary, DataBase dataBase, TeacherType teacherType) {
+        super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role, salary, dataBase);
         this.teacherType = teacherType;
+        courses = new Vector<>();
     }
-
-    public Teacher(String email ,String password, Role role){
-        super();
-        this.email = email;
-        this.password = password;
-        roles = new Vector<Role>();
-        roles.add(role);
-        courses = new Vector<ActivatedCourses>();
-    }
-
-    public TeacherType getTeacherType() {
-        return teacherType;
-    }
-    public void addCourse(ActivatedCourses course){
-        courses.add(course);
-    }
-    public void getView(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("view courses\nlog out");
-        String option = sc.next();
-        if(option.equals("courses")){
-            viewCourses();
-        }
-    };
-    public void setTeacherType(TeacherType teacherType) {
-        this.teacherType = teacherType;
-    }
-
-    public void uploadFiles(){}
-
-    public void sendComplainToDean(){}
-
-    public void putMark(Student student, Course course, double mark){};
-
-    public  void putAttendance(Student student, Course course, boolean present){};
 
     public void viewCourses(){
         if(courses == null){
             System.out.print("No courses registered");
-            return;
+            getView();
         }
         for(ActivatedCourses activatedCourses: courses){
             System.out.println(activatedCourses.getCourse().getName());
+            System.out.println("Write back, to back to the view");
+            String option = sc.next();
+            if(option.equals("back")) getView();
         }
     };
 
-    public void viewTeacherSchedules() {}
+    @Override
+    public void getView() {
+        System.out.print("Welcome to system\nSee messages\nSend Messages\nView Courses");
+        String option = sc.next();
+        if(option.equals("See messages")){
+            seeMessages();
+        }
+        else if(option.equals("Send message")){
+            sendMessage();
+        }
+        else if(option.equals("View Courses")){
+            viewCourses();
+        }
+        else if(option.equals("log out")){
+            return;
+        }
+    }
+
+    public void addCourse(ActivatedCourses activatedCourses){
+        courses.add(activatedCourses);
+    }
 }

@@ -1,20 +1,21 @@
 package com.example.oopproject.ManagerPackege;
 
 import com.example.oopproject.Courses.ActivatedCourses;
+import com.example.oopproject.UserPackage.enums.FamilyStatus;
+import com.example.oopproject.UserPackage.enums.Gender;
 import com.example.oopproject.UserPackage.enums.Role;
 import com.example.oopproject.db.DataBase;
 
 import java.util.Scanner;
 
 public class ORManager extends Manager{
-    public ORManager(String email, String password, Role role, DataBase db) {
-        super(email,  password,  role,  db);
+    public ORManager(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, int salary, DataBase dataBase) {
+        super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role, salary, dataBase);
     }
 
     public void registerForCourse(String email, int courseCode) {
         ActivatedCourses enrolledCourse = db.findByCode(courseCode);
-        enrolledCourse.addStudent(db.findBtEmail(email));
-
+        enrolledCourse.addStudent(db.findStudentByEmail(email));
     }
 
 

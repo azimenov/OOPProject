@@ -5,6 +5,7 @@ import com.example.oopproject.UserPackage.User;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
 import com.example.oopproject.UserPackage.enums.Role;
+import com.example.oopproject.db.DataBase;
 import com.example.oopproject.student.enums.Faculty;
 import com.example.oopproject.student.enums.Organization;
 
@@ -13,43 +14,46 @@ import java.util.*;
 
 public abstract class Student extends User {
 
-    private Faculty faculty;
-    private int yearOfStudy;
-    private Organization member;
-    private Transcript transcript;
-    private Vector<ActivatedCourses> courses;
+    protected Faculty faculty;
+    protected int yearOfStudy;
+    protected Organization member;
+    protected Vector<ActivatedCourses> courses;
 
-
-    public Student(Faculty faculty, int yearOfStudy, Organization member) {
-        super();
+    public Student(String id , String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, Faculty faculty, int yearOfStudy, Organization organization) {
+        super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role);
         this.faculty = faculty;
         this.yearOfStudy = yearOfStudy;
-        this.member = member;
-        this.transcript = new Transcript();
-        this.courses = new Vector<>();
-    }
-
-    public Student(Long id, String email, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, int yearOfStudy) {
-    }
-
-    public Student(String email, String password, Role role) {
-        this.email = email;
-        this.password = password;
-        roles = new Vector<Role>();
-        roles.add(role);
+        this.member = organization;
         courses = new Vector<>();
     }
 
-    public Student(Long id, String email, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus) {
+    public Student(String id , String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, Faculty faculty, int yearOfStudy) {
+        super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role);
+        this.faculty = faculty;
+        this.yearOfStudy = yearOfStudy;
+        courses = new Vector<>();
+    }
+    public String viewFinancialInfo() {
+        return "OK";
+    }
+    public void viewCourses(){
+        if(courses == null || courses.size() == 0){
+            System.out.print("No courses registered");
+
+        }
+        for(ActivatedCourses activatedCourses: courses){
+            System.out.println(activatedCourses.getCourse().getName());
+        }
+        getView();
+
     }
 
-    public Student(String email, String password) {
+    public void addCourse(ActivatedCourses course) {
+        if(courses == null){
+            courses = new Vector<ActivatedCourses>();
+        }
+        courses.add(course);
     }
-
-    public Student() {
-
-    }
-
     public abstract void getSchedule();
 
     public Faculty getFaculty() {
@@ -74,22 +78,6 @@ public abstract class Student extends User {
 
     public void setMember(Organization member) {
         this.member = member;
-    }
-
-    public void addCourse(ActivatedCourses course) {
-        courses.add(course);
-    }
-
-    public String viewFinancialInfo() {
-        return "OK";
-    }
-
-    public Transcript getTranscript() {
-        return transcript;
-    }
-
-    public void setTranscript(Transcript transcript) {
-        this.transcript = transcript;
     }
 
 
@@ -129,16 +117,6 @@ public abstract class Student extends User {
         Student student = (Student) obj;
         return yearOfStudy == student.yearOfStudy && Objects.equals(faculty, student.faculty) && Objects.equals(member, student.member);
     }
-    public void viewCourses(){
-        if(courses == null){
-            System.out.print("No courses registered");
-            return;
-        }
-        for(ActivatedCourses activatedCourses: courses){
-            System.out.println(activatedCourses.getCourse().getName());
-        }
-    };
-
 
     public String toString() {
         return "Student{" +

@@ -2,6 +2,8 @@ package com.example.oopproject.ManagerPackege;
 
 import com.example.oopproject.Employee.Employee;
 import com.example.oopproject.TeacherPackage.Teacher;
+import com.example.oopproject.UserPackage.enums.FamilyStatus;
+import com.example.oopproject.UserPackage.enums.Gender;
 import com.example.oopproject.UserPackage.enums.Role;
 import com.example.oopproject.db.DataBase;
 import com.example.oopproject.student.Student;
@@ -11,15 +13,13 @@ import java.util.List;
 public class Manager extends Employee {
 	protected List<Message> requests;
 	protected News newsManager;
-    protected final DataBase db;
 
-    public Manager(String email, String password, Role role, DataBase db){
-        super(email, password, role);
-        this.db = db;
+    public Manager(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, int salary, DataBase dataBase) {
+        super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role, salary, dataBase);
     }
 
 
-	public List<Message> getRequests() {
+    public List<Message> getRequests() {
 		return requests;
 	}
 	

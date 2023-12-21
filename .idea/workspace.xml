@@ -4,42 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a90a74be-22a6-4b8e-94d5-afef4476917a" name="Changes" comment="User Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/Courses/ActivatedCourses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/Employee/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/ORManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/SchoolManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/enums/Semester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a90a74be-22a6-4b8e-94d5-afef4476917a" name="Changes" comment="ludshiy commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Semester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/Employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/Employee/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/ManagerDecorator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/ManagerDecoratorType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/News.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/ORManagerDecorator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/SchoolManagerDecarator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/ORManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/ORManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/SchoolManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/SchoolManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/MarkPackage/enums/Semester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/MarkPackage/enums/Semester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ResearchPackage/ResearchPaper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ResearchPackage/ResearchProject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ResearchPackage/Researcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ResearchPackage/enum/Format.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Dean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Dean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/EducationDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/EducationDirection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Teacher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/enums/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/enums/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Bachelor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Bachelor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Faculty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/enums/Faculty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/GradeLetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/enums/GradeLetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/GraduateStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/GraduateStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Master.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/enums/Organization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Phd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Phd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Semester.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Transcript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Transcript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/student/Bachelor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Bachelor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Bachelor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/GraduateStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/GraduateStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Master.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Phd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Phd.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -108,7 +95,7 @@
       <workItem from="1702204597612" duration="1283000" />
       <workItem from="1702205921211" duration="12798000" />
       <workItem from="1702535554407" duration="34000" />
-      <workItem from="1702566229708" duration="13838000" />
+      <workItem from="1702566229708" duration="21955000" />
     </task>
     <task id="LOCAL-00001" summary="User Commit">
       <option name="closed" value="true" />
@@ -134,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702482301539</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ludshiy commit">
+      <option name="closed" value="true" />
+      <created>1702588168678</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702588168678</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +160,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="User Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Commit" />
+    <MESSAGE value="ludshiy commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="ludshiy commit" />
   </component>
 </project>
