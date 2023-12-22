@@ -22,7 +22,7 @@ public class Teacher extends Employee {
         courses = new Vector<>();
     }
 
-    public void viewCourses(){
+    private void viewCourses(){
         if(courses == null){
             System.out.print("No courses registered");
             getView();
@@ -31,24 +31,24 @@ public class Teacher extends Employee {
             System.out.println(activatedCourses.getCourse().getName());
             System.out.println("Write back, to back to the view");
             String option = sc.next();
-            if(option.equals("back")) getView();
+            getView();
         }
     };
 
     @Override
     public void getView() {
-        System.out.print("Welcome to system\nSee messages\nSend Messages\nView Courses");
-        String option = sc.next();
-        if(option.equals("See messages")){
+        System.out.print("Welcome to system\n1: See messages\n2: Send Messages\n3: View Courses");
+        int option = sc.nextInt();
+        if(option == 1){
             seeMessages();
         }
-        else if(option.equals("Send message")){
+        else if(option==2){
             sendMessage();
         }
-        else if(option.equals("View Courses")){
+        else if(option==3){
             viewCourses();
         }
-        else if(option.equals("log out")){
+        else if(option==0){
             return;
         }
     }

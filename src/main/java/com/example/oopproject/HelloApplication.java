@@ -4,6 +4,7 @@ import com.example.oopproject.ManagerPackege.Manager;
 import com.example.oopproject.ManagerPackege.ORManager;
 import com.example.oopproject.ManagerPackege.SchoolManager;
 import com.example.oopproject.TeacherPackage.Teacher;
+import com.example.oopproject.TeacherPackage.TeacherType;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
 import com.example.oopproject.UserPackage.enums.Role;
@@ -31,6 +32,8 @@ public class HelloApplication {
         admin.addUser(new Bachelor(UUID.randomUUID().toString(),  "qwerty123", "Alina", "Dumanova", "+77077146503", Gender.Female, FamilyStatus.not_married, Role.Bachelor, Faculty.FIT, 2));
         admin.addUser(new Bachelor(UUID.randomUUID().toString(),  "qwerty123", "Nursultan", "Mukhambetkaliev", "+77077146503", Gender.Male, FamilyStatus.not_married, Role.Bachelor, Faculty.SEPI, 2));
 
+        admin.addUser(new Teacher(UUID.randomUUID().toString(),  "qwerty123", "Pakizar", "Shamoi", "+77077146503", Gender.Female, FamilyStatus.married, Role.Teacher, 100000, db, TeacherType.LECTURE));
+        admin.addUser(new Teacher(UUID.randomUUID().toString(),  "qwerty123", "Nariman", "Ganiev", "+77077146503", Gender.Male, FamilyStatus.not_married, Role.Teacher, 100000, db, TeacherType.TUTOR));
 
         boolean closed = false;
         while(!closed){

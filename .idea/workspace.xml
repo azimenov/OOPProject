@@ -8,25 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/Employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/Employee/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/ORManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/ORManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/SchoolManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/SchoolManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/MarkPackage/enums/Semester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/MarkPackage/enums/Semester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ResearchPackage/ResearchPaper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ResearchPackage/ResearchProject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ResearchPackage/Researcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ResearchPackage/enum/Format.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Dean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Dean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/EducationDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/EducationDirection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Bachelor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Bachelor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/GraduateStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/GraduateStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Master.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Phd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Phd.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +28,11 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -96,6 +79,7 @@
       <workItem from="1702205921211" duration="12798000" />
       <workItem from="1702535554407" duration="34000" />
       <workItem from="1702566229708" duration="21955000" />
+      <workItem from="1703165884392" duration="2580000" />
     </task>
     <task id="LOCAL-00001" summary="User Commit">
       <option name="closed" value="true" />
@@ -129,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702588168678</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ludshiy commit">
+      <option name="closed" value="true" />
+      <created>1703165969893</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703165969893</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

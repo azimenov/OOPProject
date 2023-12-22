@@ -42,25 +42,14 @@ public abstract class Employee extends User {
         for (Map.Entry<String, String> entry : messages.entrySet()) {
             System.out.println(entry.getKey() + ":" + entry.getValue());
         }
-        chooseOption();
     }
     public void sendMessage(){
         System.out.print("Write email: ");
         String email = sc.next();
         System.out.print("Write message: ");
         String message = sc.next();
-        Employee employee = db.findEmployeeByEmail(email);
-        employee.getMessage(email, message);
-        chooseOption();
-    }
-    public void chooseOption(){
-        while(true){
-            System.out.print("What next: ");
-            String option = sc.next();
-            if(option.equals("back")){
-                getView();
-            }
-        }
+        Employee employee = dataBase.findEmployeeByEmail(email);
+        employee.getMessage(this.email, message);
     }
     public void getMessage(String email, String message){
         messages.put(email, message);

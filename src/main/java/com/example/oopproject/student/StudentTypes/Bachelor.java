@@ -25,20 +25,23 @@ public class Bachelor extends Student {
 
     @Override
     public void getView() {
-        System.out.println("View Schedule\nView Courses\nlog out");
-        while(true){
+        System.out.println("1:View Schedule\n2:View Courses\n3:log out");
+
             System.out.print("Choose: ");
-            String option = sc.next();
-            if (option.equals("View Schedule")) {
+            int option = sc.nextInt();
+            if (option == 1) {
                 getSchedule();
             }
-            else if (option.equals("View Courses")) {
+            else if (option == 2) {
                 viewCourses();
             }
-            else if (option.equals("log out")) {
+            else if (option == 3) {
                 return;
             }
-        }
+            else{
+                getView();
+            }
+
 
     }
     public void viewCourses(){
@@ -50,7 +53,13 @@ public class Bachelor extends Student {
                 System.out.println(activatedCourses.getCourse().getName());
             }
         }
-        getView();
+        while(true){;
+            System.out.print("Get command");
+            String op = sc.next();
+            if(op.equals("exit")) {
+                getView();
+            }
+        }
 
     };
     @Override
