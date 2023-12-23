@@ -23,4 +23,22 @@ public class ResearchProject {
     public List<Researcher> getMembers() {
         return members;
     }
+
+    class ResearchProject {
+  
+    public void addMembers(List<Researcher> newMembers) throws InvalidMemberException {
+        for (Researcher member : newMembers) {
+            if (!(member instanceof Researcher)) {
+                throw new InvalidMemberException("Only researchers can join the research project.");
+            }
+        }
+        members.addAll(newMembers);
+    }
+}
+
+class InvalidMemberException extends Exception {
+    public InvalidMemberException(String message) {
+        super(message);
+    }
+}
 }
