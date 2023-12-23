@@ -1,6 +1,5 @@
 package com.example.oopproject.UserPackage;
 
-import com.example.oopproject.Courses.ActivatedCourses;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
 import com.example.oopproject.UserPackage.enums.Role;
@@ -9,7 +8,6 @@ import com.example.oopproject.db.DataBase;
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.Scanner;
-import java.util.Vector;
 
 public abstract class User implements Serializable{
     protected Scanner sc ;
@@ -35,14 +33,7 @@ public abstract class User implements Serializable{
         this.gender = gender;
         this.familyStatus = familyStatus;
         this.role = role;
-
     }
-
-    public User() {
-
-    }
-
-    public abstract void getView();
 
 
     public User(String email, String password) {
@@ -131,5 +122,13 @@ public abstract class User implements Serializable{
                 ", gender=" + gender +
                 ", familyStatus=" + familyStatus +
                 '}';
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

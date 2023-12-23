@@ -1,10 +1,7 @@
 package com.example.oopproject.db;
 
-import com.example.oopproject.Employee.Employee;
 import com.example.oopproject.UserPackage.User;
-import com.example.oopproject.student.Course;
-import com.example.oopproject.student.Student;
-import javafx.scene.chart.PieChart;
+import com.example.oopproject.CourseService.Course;
 
 import java.io.Serializable;
 import java.util.Vector;
