@@ -4,6 +4,7 @@ import com.example.oopproject.UserPackage.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Comparator;
 
 class Researcher extends User {
     private String name;
@@ -31,10 +32,26 @@ class Researcher extends User {
 
     public void delete(ResearchPaper researchPaper) {
         publications.remove(researchPaper);
+    } public void printPapers(Comparator<ResearchPaper> comparator) {
+        List<ResearchPaper> sortedPapers = new ArrayList<>(publications);
+        sortedPapers.sort(comparator);
+
+        for (ResearchPaper paper : sortedPapers) {
+            System.out.println(paper.getTitle());
+        }
     }
 
-    @Override
-    public void getView() {
-
+  
+    public int calculateHIndex() {
+        int hIndex = 0;
+        for (ResearchPaper paper : publications) {
+            int citations = paper.getCitations();
+            if (citations >= hIndex + 1) {
+                hIndex++;
+            }
+        }
+        return hIndex;
     }
 }
+
+   
