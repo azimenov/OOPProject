@@ -9,6 +9,7 @@ import com.example.oopproject.student.Student;
 
 import java.io.Serializable;
 import java.util.Vector;
+import java.util.stream.Collectors;
 
 public class DataBase implements Serializable {
     private final Vector<User> usersDatabase;
@@ -60,11 +61,10 @@ public class DataBase implements Serializable {
                 .findFirst()
                 .orElse(null);
     }
-    public User userLogIn(String email, String password){
+    public Vector<User> userLogIn(String email, String password){
         return usersDatabase.stream()
                 .filter(user -> user.getEmail().equals(email) && user.getPassword().equals(password))
-                .findFirst()
-                .orElse(null);
+                .collect(Collectors.toCollection(Vector::new));
 
     }
     public void addUser(User user){

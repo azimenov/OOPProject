@@ -28,8 +28,7 @@ public class Manager extends Employee {
 	}
 
 	public void getTeacherInfo(Teacher teacher) {
-        String teacherInfo = teacher.toString();
-        System.out.println("Getting teacher information: " + teacherInfo);
+        System.out.println("Getting teacher information: " + teacher);
         // Дополнительная логика, если необходимо
     }
 
@@ -44,13 +43,6 @@ public class Manager extends Employee {
         System.out.println("Generating report...");
     }
 
-    public void getStudentsRequests(Student student, Request request) {
-        String studentRequestInfo = "Student: " + student.getFirstName() +student.getLastName()+ ", ID: " + student.getId() +
-                                    "\nRequest Details: " + request.getRequestDetails();
-
-        System.out.println("Getting students' requests:\n" + studentRequestInfo);
-       
-    }
 
     public void getStudentFinanceInfo(Student student) {
         String financeInfo = student.viewFinancialInfo();

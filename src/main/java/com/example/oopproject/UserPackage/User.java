@@ -21,7 +21,7 @@ public abstract class User implements Serializable{
     protected String phoneNumber;
     protected Gender gender;
     protected FamilyStatus familyStatus;
-    protected Vector<Role> roles;
+    protected Role role;
     protected DataBase db;
 
     public User(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role) {
@@ -34,32 +34,17 @@ public abstract class User implements Serializable{
         this.phoneNumber = phoneNumber;
         this.gender = gender;
         this.familyStatus = familyStatus;
-        if(roles == null) {
-            roles = new Vector<>();
-        }
-        roles.add(role);
+        this.role = role;
+
+    }
+
+    public User() {
 
     }
 
     public abstract void getView();
 
-    public Role chooseRole(){
-        if(roles.size()>1){
-            Scanner sc = new Scanner(System.in);
-            System.out.print("In which acc you want to sign in: ");
-            int n = 1;
-            for(Role role: roles){
-                System.out.print(n + " ");
-                System.out.print(role + " ");
-            }
-            int option = sc.nextInt();
-            return roles.elementAt(option - 1);
-        }
-        else{
-            System.out.println("Your role is" + roles.elementAt(0));
-            return roles.elementAt(0);
-        }
-    }
+
     public User(String email, String password) {
         this.email = email;
         this.password = password;

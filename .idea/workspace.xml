@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a90a74be-22a6-4b8e-94d5-afef4476917a" name="Changes" comment="ludshiy commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ReearcherPackage/Format.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ReearcherPackage/ResearchPaper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ReearcherPackage/ResearchProject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ReearcherPackage/Researcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/Factory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/Employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/Employee/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherPackage/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Bachelor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/student/StudentTypes/Bachelor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerPackege/Request.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/DataBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +88,7 @@
       <workItem from="1702205921211" duration="12798000" />
       <workItem from="1702535554407" duration="34000" />
       <workItem from="1702566229708" duration="21955000" />
-      <workItem from="1703165884392" duration="2580000" />
+      <workItem from="1703165884392" duration="6365000" />
     </task>
     <task id="LOCAL-00001" summary="User Commit">
       <option name="closed" value="true" />
@@ -121,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703165969893</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ludshiy commit">
+      <option name="closed" value="true" />
+      <created>1703276492091</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703276492091</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

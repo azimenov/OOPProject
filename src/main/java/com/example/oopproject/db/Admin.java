@@ -21,7 +21,7 @@ public class Admin implements Serializable {
     public void addCourse(Course course){
         db.addCourse(course);
     }
-    public User userLogIn(String email, String password){
+    public Vector<User> userLogIn(String email, String password){
         return db.userLogIn(email, password);
     }
     public void addUser(User user){

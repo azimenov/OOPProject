@@ -1,10 +1,23 @@
 package com.example.oopproject.ManagerPackege;
 
+import java.time.LocalDateTime;
+import java.util.Date;
+
 public class Message {
 	private String theme;
     private String text;
-    private Request sender;
+    private String sender;
+	private LocalDateTime date;
     private boolean read;
+
+	public Message(String theme, String text, String sender, boolean read, LocalDateTime date) {
+		this.theme = theme;
+		this.text = text;
+		this.sender = sender;
+		this.read = read;
+		this.date = date;
+	}
+
 	public String getTheme() {
 		return theme;
 	}
@@ -17,19 +30,33 @@ public class Message {
 	public void setText(String text) {
 		this.text = text;
 	}
-	public Request getSender() {
-		return sender;
-	}
-	public void setSender(Request sender) {
-		this.sender = sender;
-	}
 	public boolean getRead() {
 		return read;
 	}
 	public void setRead(boolean read) {
 		this.read = read;
 	}
-    
-    
 
+
+	public String getSender() {
+		return sender;
+	}
+
+	public void setSender(String sender) {
+		this.sender = sender;
+	}
+
+	public boolean isRead() {
+		return read;
+	}
+
+	@Override
+	public String toString() {
+		return "Message{" +
+				"theme='" + theme + '\'' +
+				", text='" + text + '\'' +
+				", sender='" + sender + '\'' +
+				", date=" + date +
+				'}';
+	}
 }
