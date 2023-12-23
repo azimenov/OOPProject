@@ -17,48 +17,7 @@ public class SchoolManager extends Manager {
         super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role, salary, dataBase);
     }
 
-    public void assignCourseToTeacher(String email, int courseCode) {
-        ActivatedCourses enrolledCourses = db.findByCode(courseCode);
-        enrolledCourses.setLecturer(db.findTeacherByEmail(email));
-        db.findTeacherByEmail(email).addCourse(enrolledCourses);
-    }
-    public void assignCourseToTeacher(){
-        System.out.print("Write teachers email:");
-        Scanner sc = new Scanner(System.in);
-        String email = sc.next();
 
-        System.out.print("Write course id:");
-        int id = sc.nextInt();
-        assignCourseToTeacher(email, id);
-    }
-    public void activateCourse(String id){
-        Course course = db.findCourseByCode(id);
-        ActivatedCourses enrolledCourse = new ActivatedCourses(course, 1);
-        db.addCourse(enrolledCourse);
-    }
-    @Override
-    public void getView() {
-        Scanner sc = new Scanner(System.in);
-        String option = "";
-        boolean log_out = false;
-        System.out.println("activate course\nassign teacher course\nlog out");
-        option = sc.next();
-        if(option.equals("activate")){
-            System.out.print("Write id of course to activate");
-            String id = sc.next();
-            activateCourse(id);
-            System.out.println("Course activated");
-            System.out.print("Do you want to assign teacher for course?");
-            option = sc.next();
-            if(option.equals("yes")) {
-                assignCourseToTeacher();
-            }
-        }
-        if(option.equals("log out")){
-            return;
-        }
-
-    }
 	@Override
     public String toString() {
         return super.toString() ;

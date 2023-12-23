@@ -55,4 +55,13 @@ public class ActivatedCourses {
     public void setStudents(Vector<Student> students) {
         this.students = students;
     }
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+        teacher.addCourse(this);
+    }
 }

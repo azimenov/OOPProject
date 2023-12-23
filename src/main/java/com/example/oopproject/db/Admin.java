@@ -15,22 +15,8 @@ public class Admin implements Serializable {
     public Admin(DataBase db){
         this.db = db;
     }
-    public void addCourse(Course course){
-        db.addCourse(course);
-    }
     public Vector<User> userLogIn(String email, String password){
         return db.userLogIn(email, password);
-    }
-    public void addUser(User user){
-        db.addUser(user);
-    }
-
-    public void deleteUser(User user){
-        db.deleteUser(user);
-    }
-
-    public void displayAllUsers(){
-        db.displayAllUsers();
     }
 
 }
