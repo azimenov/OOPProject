@@ -35,11 +35,24 @@ public class EmployeeController {
         }
         System.out.print("There are no new messages\n");
     }
-    public void sendMessage(){
+
+    public void viewSalary() {
+        System.out.println("Your current salary is: " + employee.getSalary());
+    }
+
+    public void updateSalary() {
+        System.out.print("Enter the new salary: ");
+        int newSalary = sc.nextInt();
+        employee.setSalary(newSalary);
+        System.out.println("Salary updated successfully!");
+    }
+
+    public void sendMessage() {
         System.out.print("Write email: ");
         String email = sc.next();
         sendMessage(email);
     }
+
     public void sendMessage(String email){
         System.out.println("Write theme");
         String theme = sc.next();
