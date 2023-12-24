@@ -1,6 +1,7 @@
 package com.example.oopproject.StudentService.model;
 
-import com.example.oopproject.CourseService.ActivatedCourses;
+import com.example.oopproject.CourseService.Course;
+import com.example.oopproject.CourseService.Group;
 import com.example.oopproject.UserPackage.User;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
@@ -16,21 +17,21 @@ public  class Student extends User {
     protected Faculty faculty;
     protected int yearOfStudy;
     protected Organization member;
-    protected Vector<ActivatedCourses> courses;
+    protected Vector<Group> groups;
 
     public Student(String id , String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, Faculty faculty, int yearOfStudy, Organization organization) {
         super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role);
         this.faculty = faculty;
         this.yearOfStudy = yearOfStudy;
         this.member = organization;
-        courses = new Vector<>();
+        groups = new Vector<>();
     }
 
     public Student(String id , String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, Faculty faculty, int yearOfStudy) {
         super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role);
         this.faculty = faculty;
         this.yearOfStudy = yearOfStudy;
-        courses = new Vector<>();
+        groups = new Vector<>();
     }
     public Faculty getFaculty() {
         return faculty;
@@ -72,15 +73,9 @@ public  class Student extends User {
                 ", member=" + member +
                 '}';
     }
-    public void addCourse(ActivatedCourses course){
-        courses.add(course);
-    }
-    public Vector<ActivatedCourses> getCourses() {
-        return courses;
+    public void addGroup(Group group){
+        groups.add(group);
     }
 
-    public void setCourses(Vector<ActivatedCourses> courses) {
-        this.courses = courses;
-    }
 }
 

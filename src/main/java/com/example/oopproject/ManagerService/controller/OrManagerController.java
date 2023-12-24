@@ -1,6 +1,7 @@
 package com.example.oopproject.ManagerService.controller;
 
 import com.example.oopproject.CourseService.ActivatedCourses;
+import com.example.oopproject.CourseService.Group;
 import com.example.oopproject.CourseService.repository.CourseRepositoryImpl;
 import com.example.oopproject.EmployeeService.model.Employee;
 import com.example.oopproject.EmployeeService.repository.EmployeeRepositoryImpl;
@@ -14,8 +15,8 @@ public class OrManagerController extends ManagerController{
         super(repository, employee, studentRepository, courseRepository, teacherRepository, manager);
     }
 
-    public void registerStudentForCourse(String email, String courseCode) {
-        courseRepository.findActivatedCourseById(courseCode).addStudent(studentRepository.findStudentByEmail(email));
+    public void registerStudentForCourse(String email, Group group) {
+        studentRepository.findStudentByEmail(email).addGroup(group);
     }
 
 }

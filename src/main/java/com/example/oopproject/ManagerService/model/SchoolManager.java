@@ -1,14 +1,10 @@
 package com.example.oopproject.ManagerService.model;
 
 import com.example.oopproject.CourseService.ActivatedCourses;
-import com.example.oopproject.ManagerService.model.Manager;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
 import com.example.oopproject.UserPackage.enums.Role;
 import com.example.oopproject.db.DataBase;
-import com.example.oopproject.CourseService.Course;
-
-import java.util.Scanner;
 
 public class SchoolManager extends Manager {
 

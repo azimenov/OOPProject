@@ -3,7 +3,6 @@ package com.example.oopproject.CourseService.repository;
 import com.example.oopproject.CourseService.ActivatedCourses;
 import com.example.oopproject.CourseService.Course;
 import com.example.oopproject.db.DataBase;
-import javafx.scene.chart.PieChart;
 
 public class CourseRepositoryImpl implements CourseRepository{
     private DataBase dataBase;

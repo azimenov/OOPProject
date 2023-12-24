@@ -1,10 +1,9 @@
 package com.example.oopproject.db;
 
 import com.example.oopproject.CourseService.ActivatedCourses;
-import com.example.oopproject.EmployeeService.model.Employee;
-import com.example.oopproject.TeacherService.Teacher;
-import com.example.oopproject.UserPackage.User;
 import com.example.oopproject.CourseService.Course;
+import com.example.oopproject.EmployeeService.model.Employee;
+import com.example.oopproject.UserPackage.User;
 import com.example.oopproject.StudentService.model.Student;
 
 import java.io.Serializable;
