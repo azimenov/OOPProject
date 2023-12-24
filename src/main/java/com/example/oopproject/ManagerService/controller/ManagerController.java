@@ -44,57 +44,27 @@ public class ManagerController extends EmployeeController {
         this.manager = manager;
     }
 
-     public void seeMessages(){
-        for(Message message: manager.getMessages()){
-            System.out.print(message);
-            System.out.print("1: For answer\n2: Delete\n3: Answer later\n");
-            int option = sc.nextInt();
-            if(option == 1){
-                sendMessage(message.getSender());
-            }
-            else if(option == 2){
-                manager.getMessages().remove(message);
-            }
-        }
-        System.out.print("There are no new messages\n");
+         public List<Message> getMessagesFromEmployees(Manager manager) {
+        return ((Manager) employee).getMessages();
     }
 
-    public void viewSalary() {
-        System.out.println("Your current salary is: " + manager.getSalary());
+    public void viewSalary(Manager manager) {
+        System.out.println("Manager's salary: " + ((Manager) employee).getSalary());
     }
 
-    public void updateSalary() {
-        System.out.print("Enter the new salary: ");
-        int newSalary = sc.nextInt();
+    public void updateSalary(Manager manager, int newSalary) {
         manager.setSalary(newSalary);
-        System.out.println("Salary updated successfully!");
+        System.out.println("Manager's salary updated to: " + newSalary);
     }
 
-    public void viewRequests() {
-        // Implement logic to view requests specific to the Manager
+    public List<Message> viewRequests(Manager manager) {
+      
+        return manager.getRequests();
     }
 
-    public void createNews() {
-        System.out.println("Enter news content: ");
-        String newsContent = sc.nextLine();
+    public void createNews(Manager manager, String newsContent) {
         News news = new News(newsContent, LocalDateTime.now());
         manager.setNewsManager(news);
         System.out.println("News created successfully!");
     }
-
-    public void sendMessage() {
-        System.out.print("Write email: ");
-        String email = sc.next();
-        sendMessage(email);
-    }
-
-    public void sendMessage(String email){
-        System.out.println("Write theme");
-        String theme = sc.next();
-        System.out.print("Write message: ");
-        String text = sc.next();
-        Message message = new Message(theme, text, manager.getEmail(), false, LocalDateTime.now());
-        repository.findEmployeeByEmail(email).getMessages().add(message);
-    }
-
 }
