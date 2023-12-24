@@ -15,30 +15,18 @@ public class StudentController {
     }
 
 
-    public void viewTranscript() {
-
+  
+    public List<Group> getGroupsFromCourse(Student student, String courseName) {
+        return student.getGroups().stream().filter(group -> group.getCourse().getName().equals(courseName)).toList();
     }
 
-
-    public void viewSchedules(Student student, Object undefined) {
-
+    public class StudentController {
+    public Set<String> getAllCourses(Student student) {
+        Set<String> result = new HashSet<>();
+        for (Group group : student.getGroups()) {
+            result.add(group.getCourse().getName());
+        }
+        return result;
     }
 
-    public void fxRegister() {
-
     }
-
-    public void willBeAssistant() {
-
-    }
-
-    public void viewExamSchedule(Object undefined) {
-
-    }
-
-    public String viewFinancialInfo() {
-        return "OK";
-    }
-
-
-}
