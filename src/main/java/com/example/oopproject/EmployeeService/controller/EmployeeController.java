@@ -21,44 +21,22 @@ public class EmployeeController {
         sc = new Scanner(System.in);
 
     }
-    public void seeMessages(){
-        for(Message message: employee.getMessages()){
-            System.out.print(message);
-            System.out.print("1: For answer\n2: Delete\n3: Answer later\n");
-            int option = sc.nextInt();
-            if(option == 1){
-                sendMessage(message.getSender());
-            }
-            else if(option == 2){
-                employee.getMessages().remove(message);
-            }
-        }
-        System.out.print("There are no new messages\n");
+    public int getEmployeeSalary(Employee employee) {
+        return employee.getSalary();
     }
 
-    public void viewSalary() {
-        System.out.println("Your current salary is: " + employee.getSalary());
+    public Set<Message> getEmployeeMessages(Employee employee) {
+        return employee.getMessages();
     }
 
-    public void updateSalary() {
-        System.out.print("Enter the new salary: ");
-        int newSalary = sc.nextInt();
+    public void updateEmployeeSalary(Employee employee, int newSalary) {
         employee.setSalary(newSalary);
-        System.out.println("Salary updated successfully!");
+          }
+    public void sendMessage(Employee employee) {
+        employeeController.sendMessage();
     }
 
-    public void sendMessage() {
-        System.out.print("Write email: ");
-        String email = sc.next();
-        sendMessage(email);
-    }
-
-    public void sendMessage(String email){
-        System.out.println("Write theme");
-        String theme = sc.next();
-        System.out.print("Write message: ");
-        String text = sc.next();
-        Message message = new Message(theme, text, employee.getEmail(), false, LocalDateTime.now());
-        repository.findEmployeeByEmail(email).getMessages().add(message);
+    public void sendMessage(Employee employee, String email) {
+        employeeController.sendMessage(email);
     }
 }
