@@ -1,5 +1,6 @@
 package com.example.oopproject.StudentService.View;
 
+import com.example.oopproject.StudentService.model.Mark;
 import com.example.oopproject.StudentService.model.Student;
 import com.example.oopproject.StudentService.controller.StudentController;
 
@@ -7,11 +8,13 @@ import java.util.Scanner;
 
 public class StudentView {
     private final StudentController studentController;
+    private Student student;
     private final Scanner scanner;
 
-    public StudentView(StudentController studentController, Scanner scanner) {
+    public StudentView(StudentController studentController, Student student) {
         this.studentController = studentController;
-        this.scanner = scanner;
+        this.scanner = new Scanner(System.in);
+        this.student = student;
     }
 
     public void getDefaultView() {
@@ -23,8 +26,7 @@ public class StudentView {
 
     public void seeCourses() {
         System.out.println("Your Courses:");
-        HashSet<String> courses = studentController.getAllCourses(student);
-        for (String course : courses) {
+        for (String course : studentController.getAllCourses(student)) {
             System.out.println(course);
         }
     }
@@ -43,8 +45,7 @@ public class StudentView {
 
     public void viewMarks() {
         System.out.println("Your Marks:");
-        Vector<Mark> marks = studentController.viewMarks(student);
-        for (Mark mark : marks) {
+        for (Mark mark : studentController.viewMarks(student)) {
             System.out.println(mark);
         }
     }

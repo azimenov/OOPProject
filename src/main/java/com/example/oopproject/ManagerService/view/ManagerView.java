@@ -53,6 +53,4 @@ public class ManagerView extends EmployeeView{
     void createCourse(){
         managerController.activateCourse();
     }
-
-
 }
