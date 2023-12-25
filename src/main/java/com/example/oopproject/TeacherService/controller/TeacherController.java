@@ -9,13 +9,19 @@ import com.example.oopproject.EmployeeService.view.Message;
 import com.example.oopproject.StudentService.model.Mark;
 import com.example.oopproject.StudentService.model.Student;
 import com.example.oopproject.TeacherService.Teacher;
+import com.example.oopproject.TeacherService.repository.TeacherRepositoryImpl;
 
 import java.util.*;
 
-public class TeacherController extends EmployeeController {
-    public TeacherController(EmployeeRepositoryImpl repository) {
-        super(repository);
+public class TeacherController  {
+    private EmployeeRepositoryImpl employeeRepository;
+    private TeacherRepositoryImpl teacherRepository;
+
+    public TeacherController(EmployeeRepositoryImpl employeeRepository, TeacherRepositoryImpl teacherRepository) {
+        this.employeeRepository = employeeRepository;
+        this.teacherRepository = teacherRepository;
     }
+
     public List<Student> getStudentsFromGroup(Teacher teacher, String courseName){
         return teacher.getGroups().stream().filter(group -> group.getCourse().getName().equals(courseName)).findFirst().get().getStudents();
     }

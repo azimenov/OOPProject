@@ -70,7 +70,7 @@ public class HelloApplication {
             for(User user: roles){
                 if(user instanceof Bachelor && option.equals("Bachelor")){
                     Bachelor bachelor = (Bachelor)user;
-                    StudentView studentView = new StudentView(new StudentController(new StudentRepositoryImpl(db)), bachelor);
+                    StudentViewEn studentView = new StudentViewEn(new StudentController(new StudentRepositoryImpl(db)), bachelor);
                     studentView.getDefaultView();
                 }
                 else if(user instanceof Teacher && option.equals("Teacher")){

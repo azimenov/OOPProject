@@ -1,12 +1,22 @@
-import java.util.Scanner;
+package com.example.oopproject.StudentService.view;
 
-public class StudentView {
+import com.example.oopproject.StudentService.controller.StudentController;
+import com.example.oopproject.StudentService.model.Mark;
+import com.example.oopproject.StudentService.model.Student;
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class StudentViewKz {
     private final StudentController studentController;
+    private Student student;
     private final Scanner scanner;
 
-    public StudentView(StudentController studentController, Scanner scanner) {
+    public StudentViewKz(StudentController studentController, Student student) {
         this.studentController = studentController;
-        this.scanner = scanner;
+        this.student = student;
+        scanner = new Scanner(System.in);
     }
 
     private void displayKazakhView() {

@@ -1,10 +1,17 @@
-import java.util.Scanner;
+import com.example.oopproject.StudentService.controller.StudentController;
+import com.example.oopproject.StudentService.model.Mark;
+import com.example.oopproject.StudentService.model.Student;
 
-public class StudentView {
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class StudentViewRu {
     private final StudentController studentController;
     private final Scanner scanner;
+    private Student student;
 
-    public StudentView(StudentController studentController, Scanner scanner) {
+    public StudentViewRu(StudentController studentController, Scanner scanner) {
         this.studentController = studentController;
         this.scanner = scanner;
     }
