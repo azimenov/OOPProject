@@ -5,7 +5,7 @@ import com.example.oopproject.StudentService.model.Student;
 
 import java.util.Vector;
 
-public class ActivatedCourses {
+public class  ActivatedCourses {
     private Course course;
     private Vector<Group> groups;
 

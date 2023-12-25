@@ -8,10 +8,11 @@ import com.example.oopproject.UserPackage.enums.Gender;
 import com.example.oopproject.UserPackage.enums.Role;
 import com.example.oopproject.db.DataBase;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Vector;
 
-public class Teacher extends Employee {
+public class Teacher extends Employee implements Serializable {
     private TeacherType teacherType;
     private Vector<Group> groups;
 

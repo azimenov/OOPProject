@@ -22,6 +22,18 @@ public class StudentView {
         System.out.println("1. View Courses");
         System.out.println("2. View Teachers");
         System.out.println("3. View Marks");
+
+        System.out.print("Select option: ");
+        int option = scanner.nextInt();
+        if(option == 1){
+            seeCourses();
+        }
+        else if(option == 2){
+            viewInfoAboutTeacher();
+        }
+        else if(option == 3){
+            viewMarks();
+        }
     }
 
     public void seeCourses() {

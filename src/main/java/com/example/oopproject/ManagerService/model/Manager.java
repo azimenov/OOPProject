@@ -8,9 +8,10 @@ import com.example.oopproject.UserPackage.enums.Gender;
 import com.example.oopproject.UserPackage.enums.Role;
 import com.example.oopproject.db.DataBase;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Manager extends Employee {
+public class Manager extends Employee implements Serializable {
 	protected List<Message> requests;
 	protected News newsManager;
 

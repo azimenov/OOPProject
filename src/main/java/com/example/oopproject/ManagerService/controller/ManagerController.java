@@ -17,9 +17,6 @@ public class ManagerController extends EmployeeController {
     protected CourseRepositoryImpl courseRepository;
     protected TeacherRepositoryImpl teacherRepository;
 
-    public ManagerController(EmployeeRepositoryImpl repository) {
-        super(repository);
-    }
 
     public ManagerController(EmployeeRepositoryImpl repository, StudentRepositoryImpl studentRepository, CourseRepositoryImpl courseRepository, TeacherRepositoryImpl teacherRepository) {
         super(repository);

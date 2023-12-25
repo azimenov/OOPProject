@@ -26,8 +26,7 @@ public class ResearchProject {
         return members;
     }
 
-    class ResearchProject {
-  
+
     public void addMembers(List<Researcher> newMembers) throws InvalidMemberException {
         for (Researcher member : newMembers) {
             if (!(member instanceof Researcher)) {
@@ -36,11 +35,11 @@ public class ResearchProject {
         }
         members.addAll(newMembers);
     }
-}
 
-class InvalidMemberException extends Exception {
-    public InvalidMemberException(String message) {
-        super(message);
+
+    class InvalidMemberException extends Exception {
+        public InvalidMemberException(String message) {
+            super(message);
+        }
     }
-}
 }

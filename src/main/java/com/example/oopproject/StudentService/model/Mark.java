@@ -10,9 +10,8 @@ public class Mark {
     private double finalExam;
     private Semester semester; // Enum representing semester
 
-    public Mark(String courseName, GradeLetter grade, double attestation1, double attestation2, double finalExam, Semester semester) {
+    public Mark(String courseName, double attestation1, double attestation2, double finalExam, Semester semester) {
         this.courseName = courseName;
-        this.grade = grade;
         this.attestation1 = attestation1;
         this.attestation2 = attestation2;
         this.finalExam = finalExam;

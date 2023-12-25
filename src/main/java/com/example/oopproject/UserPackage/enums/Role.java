@@ -1,5 +1,5 @@
 package com.example.oopproject.UserPackage.enums;
 
 public enum Role {
-    Bachelor, Master, PhdStudent, Teacher, OrManager, SchoolManager, Researcher;
+    Bachelor, Master, PhdStudent, Teacher, Manager, Researcher;
 }

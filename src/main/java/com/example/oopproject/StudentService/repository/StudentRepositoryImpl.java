@@ -18,6 +18,7 @@ public class StudentRepositoryImpl implements StudentRepository {
     @Override
     public Student findStudentById(String Id) {
         return (Student)dataBase.getStudentDatabase().stream().filter(student -> student.getId().equals(Id)).findFirst().orElse(null);
+
     }
 
     @Override

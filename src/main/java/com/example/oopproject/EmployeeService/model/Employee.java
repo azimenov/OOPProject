@@ -7,9 +7,10 @@ import com.example.oopproject.UserPackage.enums.Gender;
 import com.example.oopproject.UserPackage.enums.Role;
 import com.example.oopproject.db.DataBase;
 
+import java.io.Serializable;
 import java.util.*;
 
-public abstract class Employee extends User {
+public abstract class Employee extends User implements Serializable {
     protected int salary;
     protected Set<Message> messages;
     protected DataBase dataBase;
@@ -35,5 +36,5 @@ public abstract class Employee extends User {
     public void setMessages(Set<Message> messages) {
         this.messages = messages;
     }
-    public void addMessgae(Message message){messages.add(message);}
+    public void addMessage(Message message){messages.add(message);}
 }

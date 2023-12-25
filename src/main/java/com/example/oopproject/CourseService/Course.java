@@ -7,7 +7,7 @@ public class Course {
     private String name;
     private String courseId;
     private int credits;
-    private List<String> files;
+
 
     public Course(String name, String courseId){
         this.name = name;
@@ -17,7 +17,6 @@ public class Course {
         this.name = name;
         this.courseId = courseId;
         this.credits = credits;
-        files = new ArrayList<>();
     }
 
     public String getName() {
@@ -42,14 +41,6 @@ public class Course {
 
     public void setCredits(int credits) {
         this.credits = credits;
-    }
-
-    public List<String> getFiles() {
-        return files;
-    }
-
-    public void setFiles(List<String> files) {
-        this.files = files;
     }
 
 }

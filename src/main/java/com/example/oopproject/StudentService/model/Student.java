@@ -10,10 +10,11 @@ import com.example.oopproject.UserPackage.enums.Role;
 import com.example.oopproject.StudentService.enums.Faculty;
 import com.example.oopproject.StudentService.enums.Organization;
 
+import java.io.Serializable;
 import java.util.*;
 
 
-public  class Student extends User {
+public  class Student extends User implements Serializable {
 
     protected Faculty faculty;
     protected int yearOfStudy;
