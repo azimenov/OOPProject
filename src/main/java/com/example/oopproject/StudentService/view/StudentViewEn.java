@@ -1,3 +1,5 @@
+package com.example.oopproject.StudentService.view;
+
 import com.example.oopproject.StudentService.controller.StudentController;
 import com.example.oopproject.StudentService.model.Mark;
 import com.example.oopproject.StudentService.model.Student;

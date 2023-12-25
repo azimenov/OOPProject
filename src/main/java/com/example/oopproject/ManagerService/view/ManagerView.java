@@ -1,15 +1,14 @@
 package com.example.oopproject.ManagerService.view;
 
-import com.example.oopproject.EmployeeService.view.EmployeeView;
+import com.example.oopproject.EmployeeService.model.Message;
 import com.example.oopproject.ManagerService.controller.ManagerController;
 import com.example.oopproject.ManagerService.model.Manager;
 import com.example.oopproject.StudentService.enums.Faculty;
-import com.example.oopproject.StudentService.model.Student;
-import javafx.scene.input.Mnemonic;
 
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
-public class ManagerView extends EmployeeView {
+public class ManagerView {
     Manager manager;
     ManagerController managerController;
     Scanner sc ;
@@ -20,7 +19,7 @@ public class ManagerView extends EmployeeView {
         sc = new Scanner(System.in);
     }
 
-    public void getDefaultView() {
+    public void getView() {
 
         System.out.println("Welcome to system\n1.See messages\n2.See all messages\n3.Send Messages\n4.Register student to course\n5.Assign course to teacher\n6.Open course");
         Scanner sc = new Scanner(System.in);
@@ -41,7 +40,35 @@ public class ManagerView extends EmployeeView {
             openCourse();
         }
     }
+    public void seeMessages(){
+        for(Message message: managerController.getUnreadMessages(manager)){
+            System.out.println(message);
+        }
+        getView();
+    }
+    public void seeUnreadMessages(){
+        for(Message message: managerController.getAllMessages(manager)){
+            System.out.println(message);
+        }
+        getView();
+    }
 
+    public void sendMessage(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Write email: ");
+        String email = sc.next();
+        System.out.println("Enter message theme:");
+        String theme = sc.next();
+
+        System.out.println("Enter message text:");
+        String text = sc.next();
+
+        System.out.println("Enter your email:");
+        String sender = sc.next();
+
+        managerController.sendMessage(new Message(theme, text, sender, false, LocalDateTime.now()), email);
+        getView();
+    }
     public void registerStudentForCourse() {
         System.out.println("Enter student email:");
         String email = sc.nextLine();

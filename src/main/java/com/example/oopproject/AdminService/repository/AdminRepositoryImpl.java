@@ -17,13 +17,13 @@ public class AdminRepositoryImpl implements AdminRepository {
     public void addUser(User user) {
 
         dataBase.getUsersDatabase().add(user);
+        if(user instanceof Student) dataBase.getStudentDatabase().add((Student) user);
+        if(user instanceof Employee) dataBase.getEmployeeDatabase().add((Employee) user);
     }
 
     @Override
     public void deleteUser(User user) {
         dataBase.getUsersDatabase().remove(user);
-        if(user instanceof Student) dataBase.getStudentDatabase().add((Student) user);
-        if(user instanceof Employee) dataBase.getEmployeeDatabase().add((Employee) user);
     }
 
     @Override

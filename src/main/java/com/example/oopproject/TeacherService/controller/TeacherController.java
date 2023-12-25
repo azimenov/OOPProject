@@ -5,7 +5,6 @@ import com.example.oopproject.CourseService.Group;
 import com.example.oopproject.EmployeeService.controller.EmployeeController;
 import com.example.oopproject.EmployeeService.model.Employee;
 import com.example.oopproject.EmployeeService.repository.EmployeeRepositoryImpl;
-import com.example.oopproject.EmployeeService.view.Message;
 import com.example.oopproject.StudentService.model.Mark;
 import com.example.oopproject.StudentService.model.Student;
 import com.example.oopproject.TeacherService.Teacher;
@@ -13,12 +12,11 @@ import com.example.oopproject.TeacherService.repository.TeacherRepositoryImpl;
 
 import java.util.*;
 
-public class TeacherController  {
-    private EmployeeRepositoryImpl employeeRepository;
+public class TeacherController  extends EmployeeController{
     private TeacherRepositoryImpl teacherRepository;
 
     public TeacherController(EmployeeRepositoryImpl employeeRepository, TeacherRepositoryImpl teacherRepository) {
-        this.employeeRepository = employeeRepository;
+        super(employeeRepository);
         this.teacherRepository = teacherRepository;
     }
 
@@ -53,14 +51,4 @@ public class TeacherController  {
             }
         }
     }
-    public void sendMessage(Message message, String email){
-        employeeRepository.findEmployeeByEmail(email).addMessage(message);
-    }
-    public List<Message> getUnreadMessages(Teacher employee){
-        return employee.getMessages().stream().filter(message -> message.getRead() == false).toList();
-    }
-    public List<Message> getAllMessages(Teacher employee){
-        return employee.getMessages().stream().toList();
-    }
-
 }

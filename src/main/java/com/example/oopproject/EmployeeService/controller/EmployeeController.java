@@ -2,7 +2,7 @@ package com.example.oopproject.EmployeeService.controller;
 
 import com.example.oopproject.EmployeeService.model.Employee;
 import com.example.oopproject.EmployeeService.repository.EmployeeRepositoryImpl;
-import com.example.oopproject.EmployeeService.view.Message;
+import com.example.oopproject.EmployeeService.model.Message;
 
 import java.util.List;
 

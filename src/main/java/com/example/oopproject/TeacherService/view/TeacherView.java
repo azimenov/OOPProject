@@ -1,7 +1,6 @@
 package com.example.oopproject.TeacherService.view;
 
-import com.example.oopproject.EmployeeService.view.EmployeeView;
-import com.example.oopproject.EmployeeService.view.Message;
+import com.example.oopproject.EmployeeService.model.Message;
 import com.example.oopproject.StudentService.enums.Semester;
 import com.example.oopproject.StudentService.model.Mark;
 import com.example.oopproject.StudentService.model.Student;

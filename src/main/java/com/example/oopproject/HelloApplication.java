@@ -8,13 +8,14 @@ import com.example.oopproject.EmployeeService.repository.EmployeeRepositoryImpl;
 import com.example.oopproject.ManagerService.controller.ManagerController;
 import com.example.oopproject.ManagerService.model.Manager;
 import com.example.oopproject.ManagerService.view.ManagerView;
-import com.example.oopproject.StudentService.View.StudentView;
 import com.example.oopproject.StudentService.controller.StudentController;
 import com.example.oopproject.StudentService.enums.Faculty;
 import com.example.oopproject.StudentService.model.Bachelor;
 import com.example.oopproject.StudentService.model.Mark;
 import com.example.oopproject.StudentService.model.Student;
 import com.example.oopproject.StudentService.repository.StudentRepositoryImpl;
+import com.example.oopproject.StudentService.view.StudentViewEn;
+import com.example.oopproject.StudentService.view.StudentViewKz;
 import com.example.oopproject.TeacherService.Teacher;
 import com.example.oopproject.TeacherService.TeacherType;
 import com.example.oopproject.TeacherService.controller.TeacherController;
@@ -75,13 +76,13 @@ public class HelloApplication {
                 }
                 else if(user instanceof Teacher && option.equals("Teacher")){
                     Teacher teacher = (Teacher) user;
-                    TeacherView view = new TeacherView(teacher, new TeacherController(new EmployeeRepositoryImpl(db)));
+                    TeacherView view = new TeacherView(teacher, new TeacherController(new EmployeeRepositoryImpl(db), new TeacherRepositoryImpl(db)));
                     view.getView();
                 }
                 else if(user instanceof Manager && option.equals("Manager")){
                     Manager manager = (Manager) user;
                     ManagerView view = new ManagerView(manager, new ManagerController(new EmployeeRepositoryImpl(db), new StudentRepositoryImpl(db), new CourseRepositoryImpl(db), new TeacherRepositoryImpl(db)));
-                    view.getView();
+
                 }
             }
         }

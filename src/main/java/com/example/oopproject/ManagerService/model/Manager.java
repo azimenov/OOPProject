@@ -1,7 +1,7 @@
 package com.example.oopproject.ManagerService.model;
 
 import com.example.oopproject.EmployeeService.model.Employee;
-import com.example.oopproject.EmployeeService.view.Message;
+import com.example.oopproject.EmployeeService.model.Message;
 import com.example.oopproject.ManagerService.News;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
