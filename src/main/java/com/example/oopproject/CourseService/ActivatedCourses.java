@@ -8,6 +8,12 @@ import java.util.Vector;
 public class ActivatedCourses {
     private Course course;
     private Vector<Group> groups;
+
+    public ActivatedCourses(Course course, int numberOfGroups) {
+        this.course = course;
+        groups = new Vector<>(numberOfGroups);
+    }
+
     public void addStudent(Student student, int groupNumber){
         groups.elementAt(groupNumber).addStudent(student);
         student.addGroup(groups.elementAt(groupNumber));
