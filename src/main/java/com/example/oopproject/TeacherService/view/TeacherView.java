@@ -39,12 +39,12 @@ public class TeacherView extends EmployeeView {
         }
     }
     public void seeCourses(){
-        teacherController.getAllCourses(teacher);
+        teacherController.getAllCourses(teacher);//Zhanel
     }
     public void seeStudents(){
-        teacherController.getAllStudents(teacher);
+        teacherController.getAllStudents(teacher);//Zhanel
     }
     public void putMarks(){
-        teacherController.setMark(teacher, email, mark);
+        teacherController.setMark(teacher, email, mark);//Zhanel
     }
 }

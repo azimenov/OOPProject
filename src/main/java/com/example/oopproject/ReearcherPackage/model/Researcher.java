@@ -1,5 +1,6 @@
-package com.example.oopproject.ReearcherPackage;
+package com.example.oopproject.ReearcherPackage.model;
 
+import com.example.oopproject.ReearcherPackage.ResearchPaper;
 import com.example.oopproject.UserPackage.User;
 
 import java.util.ArrayList;
@@ -32,7 +33,8 @@ class Researcher extends User {
 
     public void delete(ResearchPaper researchPaper) {
         publications.remove(researchPaper);
-    } public void printPapers(Comparator<ResearchPaper> comparator) {
+    }
+    public void printPapers(Comparator<ResearchPaper> comparator) {
         List<ResearchPaper> sortedPapers = new ArrayList<>(publications);
         sortedPapers.sort(comparator);
 

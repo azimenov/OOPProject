@@ -28,11 +28,15 @@ public class ManagerController extends EmployeeController {
         this.teacherRepository = teacherRepository;
     }
 
-    public void registerStudentForCourse(String email, Group group) {
+    public void registerStudentForCourse(String email, String courseName, int groupNumber) {
+        Group group = courseRepository.findActivatedCourseByCourseName(courseName).getGroupByNumber(groupNumber);
+        group.addStudent(studentRepository.findStudentByEmail(email));
         studentRepository.findStudentByEmail(email).addGroup(group);
     }
 
-    public void assignCourseToTeacher(String email, Group group) {
+    public void assignCourseToTeacher(String email, String courseName, int groupNumber) {
+        Group group = courseRepository.findActivatedCourseByCourseName(courseName).getGroupByNumber(groupNumber);
+        group.setTeacher(teacherRepository.findTeacherByEmail(email));
         teacherRepository.findTeacherByEmail(email).addGroup(group);
     }
     public void activateCourse(ActivatedCourses activatedCourses){

@@ -41,6 +41,10 @@ public abstract class User implements Serializable{
         this.password = password;
     }
 
+    public User() {
+
+    }
+
     public String getId() {
         return id;
     }

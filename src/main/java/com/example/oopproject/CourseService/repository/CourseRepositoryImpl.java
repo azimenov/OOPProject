@@ -24,5 +24,8 @@ public class CourseRepositoryImpl implements CourseRepository{
         return dataBase.getEnrolledCourses().stream().filter(course -> course.getCourse().getCourseId().equals(id)).findFirst().orElse(null);
     }
 
-
+    @Override
+    public ActivatedCourses findActivatedCourseByCourseName(String name) {
+        return (ActivatedCourses) dataBase.getEnrolledCourses().stream().filter(activatedCourses -> activatedCourses.getCourse().getName().equals(name));
+    }
 }

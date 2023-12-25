@@ -1,4 +1,6 @@
-package com.example.oopproject.ReearcherPackage;
+package com.example.oopproject.ReearcherPackage.model;
+
+import com.example.oopproject.ReearcherPackage.model.Researcher;
 
 import java.util.ArrayList;
 import java.util.List;

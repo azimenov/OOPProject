@@ -12,6 +12,10 @@ public class ActivatedCourses {
         groups.elementAt(groupNumber).addStudent(student);
         student.addGroup(groups.elementAt(groupNumber));
     }
+
+    public Group getGroupByNumber(int num){
+        return groups.elementAt(num);
+    }
     public void assignTeacher(Teacher teacher, int groupNumber){
         groups.elementAt(groupNumber).setTeacher(teacher);
         teacher.addGroup(groups.elementAt(groupNumber));
