@@ -2,6 +2,7 @@ package com.example.oopproject.StudentService.model;
 
 import com.example.oopproject.CourseService.Course;
 import com.example.oopproject.CourseService.Group;
+import com.example.oopproject.ManagerService.model.Manager;
 import com.example.oopproject.UserPackage.User;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
@@ -18,13 +19,14 @@ public  class Student extends User {
     protected int yearOfStudy;
     protected Organization member;
     protected Vector<Group> groups;
-
+    protected Vector<Mark> marks;
     public Student(String id , String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, Faculty faculty, int yearOfStudy, Organization organization) {
         super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role);
         this.faculty = faculty;
         this.yearOfStudy = yearOfStudy;
         this.member = organization;
         groups = new Vector<>();
+        marks = new Vector<>();
     }
 
     public Student(String id , String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, Faculty faculty, int yearOfStudy) {
@@ -32,6 +34,7 @@ public  class Student extends User {
         this.faculty = faculty;
         this.yearOfStudy = yearOfStudy;
         groups = new Vector<>();
+        marks = new Vector<>();
     }
     public Faculty getFaculty() {
         return faculty;
@@ -77,5 +80,24 @@ public  class Student extends User {
         groups.add(group);
     }
 
+    public Vector<Group> getGroups() {
+        return groups;
+    }
+
+    public void setGroups(Vector<Group> groups) {
+        this.groups = groups;
+    }
+
+    public Vector<Mark> getMarks() {
+        return marks;
+    }
+
+    public void setMarks(Vector<Mark> marks) {
+        this.marks = marks;
+    }
+
+    public void addMark(Mark mark){
+        marks.add(mark);
+    }
 }
 

@@ -2,41 +2,29 @@ package com.example.oopproject.EmployeeService.controller;
 
 import com.example.oopproject.EmployeeService.model.Employee;
 import com.example.oopproject.EmployeeService.repository.EmployeeRepositoryImpl;
-import com.example.oopproject.EmployeeService.Message;
+import com.example.oopproject.EmployeeService.view.Message;
 
-import java.time.LocalDateTime;
-import java.util.Scanner;
+import java.util.List;
 
 public class EmployeeController {
-    protected EmployeeRepositoryImpl repository;
-    protected Employee employee;
-    protected Scanner sc;
+    protected EmployeeRepositoryImpl employeeRepository;
 
     public EmployeeController(EmployeeRepositoryImpl repository){
-        this.repository = repository;
-    }
-    public EmployeeController(EmployeeRepositoryImpl repository, Employee employee){
-        this.repository = repository;
-        this.employee = employee;
-        sc = new Scanner(System.in);
+        this.employeeRepository = repository;
 
-    }
-    public int getEmployeeSalary(Employee employee) {
-        return employee.getSalary();
-    }
-
-    public Set<Message> getEmployeeMessages(Employee employee) {
-        return employee.getMessages();
     }
 
     public void updateEmployeeSalary(Employee employee, int newSalary) {
         employee.setSalary(newSalary);
-          }
-    public void sendMessage(Employee employee) {
-        employeeController.sendMessage();
     }
 
-    public void sendMessage(Employee employee, String email) {
-        employeeController.sendMessage(email);
+    public void sendMessage(Message message, String email){
+        employeeRepository.findEmployeeByEmail(email).addMessgae(message);
+    }
+    public List<Message> getUnreadMessages(Employee employee){
+        return employee.getMessages().stream().filter(message -> message.getRead() == false).toList();
+    }
+    public List<Message> getAllMessages(Employee employee){
+        return employee.getMessages().stream().toList();
     }
 }

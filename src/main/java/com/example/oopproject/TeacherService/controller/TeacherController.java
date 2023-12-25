@@ -4,12 +4,11 @@ import com.example.oopproject.CourseService.ActivatedCourses;
 import com.example.oopproject.CourseService.Group;
 import com.example.oopproject.EmployeeService.controller.EmployeeController;
 import com.example.oopproject.EmployeeService.repository.EmployeeRepositoryImpl;
+import com.example.oopproject.StudentService.model.Mark;
 import com.example.oopproject.StudentService.model.Student;
 import com.example.oopproject.TeacherService.Teacher;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class TeacherController extends EmployeeController {
     public TeacherController(EmployeeRepositoryImpl repository) {
@@ -18,9 +17,6 @@ public class TeacherController extends EmployeeController {
     public List<Student> getStudentsFromGroup(Teacher teacher, String courseName){
         return teacher.getGroups().stream().filter(group -> group.getCourse().getName().equals(courseName)).findFirst().get().getStudents();
     }
-    public void assignCourse(Teacher teacher, Group group){
-        teacher.addGroup(group);
-    }
     public Set<String> getAllCourses(Teacher teacher){
         Set<String> result = new HashSet<>();
         for(Group group: teacher.getGroups()){
@@ -28,4 +24,25 @@ public class TeacherController extends EmployeeController {
         }
         return result;
     }
+
+    public Map<String, Vector<Student>> getAllStudents(Teacher teacher){
+        Map<String, Vector<Student>> students = new HashMap<>();
+
+        for(Group group: teacher.getGroups()){
+            students.put(group.getCourse().getName(), group.getStudents());
+        }
+
+        return students;
+    }
+
+    public void setMark(Teacher teacher, String email, Mark mark){
+        for(Group group: teacher.getGroups()){
+            for(Student student: group.getStudents()){
+                if(student.getEmail().equals(email) && group.getCourse().getName().equals(mark.getCourseName())){
+                    student.addMark(mark);
+                }
+            }
+        }
+    }
+
 }

@@ -1,6 +1,6 @@
 package com.example.oopproject.EmployeeService.model;
 
-import com.example.oopproject.EmployeeService.Message;
+import com.example.oopproject.EmployeeService.view.Message;
 import com.example.oopproject.UserPackage.User;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
@@ -35,4 +35,5 @@ public abstract class Employee extends User {
     public void setMessages(Set<Message> messages) {
         this.messages = messages;
     }
+    public void addMessgae(Message message){messages.add(message);}
 }

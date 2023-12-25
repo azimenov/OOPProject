@@ -26,9 +26,6 @@ public class Group {
         this.teacher = teacher;
     }
 
-    public Vector<Student> getStudents() {
-        return students;
-    }
 
     public void setStudents(Vector<Student> students) {
         this.students = students;
@@ -40,5 +37,9 @@ public class Group {
 
     public void setCourse(Course course) {
         this.course = course;
+    }
+
+    public Vector<Student> getStudents() {
+        return students;
     }
 }

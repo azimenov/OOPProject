@@ -5,21 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a90a74be-22a6-4b8e-94d5-afef4476917a" name="Changes" comment="mvc">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/CourseService/Group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/CourseService/controller/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/CourseService/ActivatedCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/CourseService/ActivatedCourses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/CourseService/repository/CourseRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/CourseService/repository/CourseRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/controller/OrManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/controller/OrManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/controller/SchoolManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/controller/SchoolManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/model/ORManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/model/ORManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/model/SchoolManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/model/SchoolManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/CourseService/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/CourseService/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/EmployeeService/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/EmployeeService/view/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/EmployeeService/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/EmployeeService/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/EmployeeService/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/EmployeeService/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/EmployeeService/view/EmployeeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/EmployeeService/view/EmployeeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/controller/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/controller/OrManagerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/controller/SchoolManagerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/model/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/model/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/model/ORManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/model/SchoolManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/view/ManagerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ManagerService/view/ManagerView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/StudentService/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/StudentService/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/StudentService/model/Mark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/StudentService/model/Mark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/StudentService/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/StudentService/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherService/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherService/Teacher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherService/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherService/controller/TeacherController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherService/view/TeacherView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherService/view/TeacherView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/DataBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +94,7 @@
       <workItem from="1702205921211" duration="12798000" />
       <workItem from="1702535554407" duration="34000" />
       <workItem from="1702566229708" duration="21955000" />
-      <workItem from="1703165884392" duration="21827000" />
+      <workItem from="1703165884392" duration="28586000" />
     </task>
     <task id="LOCAL-00001" summary="User Commit">
       <option name="closed" value="true" />
@@ -173,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703418220477</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="mvc">
+      <option name="closed" value="true" />
+      <created>1703418231112</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1703418231112</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

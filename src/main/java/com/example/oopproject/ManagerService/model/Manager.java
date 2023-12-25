@@ -1,7 +1,7 @@
 package com.example.oopproject.ManagerService.model;
 
 import com.example.oopproject.EmployeeService.model.Employee;
-import com.example.oopproject.EmployeeService.Message;
+import com.example.oopproject.EmployeeService.view.Message;
 import com.example.oopproject.ManagerService.News;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
@@ -18,10 +18,6 @@ public class Manager extends Employee {
         super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role, salary, dataBase);
     }
 
-
-
-
-    
     @Override
     public String toString() {
         return "Manager{" +

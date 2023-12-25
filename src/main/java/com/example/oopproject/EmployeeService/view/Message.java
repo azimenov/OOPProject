@@ -1,4 +1,4 @@
-package com.example.oopproject.EmployeeService;
+package com.example.oopproject.EmployeeService.view;
 
 import java.time.LocalDateTime;
 

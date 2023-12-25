@@ -4,12 +4,14 @@ import com.example.oopproject.StudentService.enums.Semester;
 
 public class Mark {
     private GradeLetter grade; // Enum representing grade
+    private String courseName;
     private double attestation1;
     private double attestation2;
     private double finalExam;
     private Semester semester; // Enum representing semester
 
-    public Mark(GradeLetter grade, double attestation1, double attestation2, double finalExam, Semester semester) {
+    public Mark(String courseName, GradeLetter grade, double attestation1, double attestation2, double finalExam, Semester semester) {
+        this.courseName = courseName;
         this.grade = grade;
         this.attestation1 = attestation1;
         this.attestation2 = attestation2;
@@ -56,5 +58,13 @@ public class Mark {
 
     public void setSemester(Semester semester) {
         this.semester = semester;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 }
