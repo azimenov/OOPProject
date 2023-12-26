@@ -2,7 +2,7 @@ package com.example.oopproject.ManagerService.view;
 
 import com.example.oopproject.EmployeeService.view.EmployeeView;
 import com.example.oopproject.ManagerService.Manager;
-import com.example.oopproject.ManagerService.view.ManagerView;
+import com.example.oopproject.ManagerService.view.ManagerViewEn;
 import com.example.oopproject.ManagerService.controller.ManagerController;
 import com.example.oopproject.ManagerService.model.Manager;
 import com.example.oopproject.StudentService.model.Student;
@@ -11,11 +11,11 @@ import com.example.oopproject.StudentService.model.Major;
 
 import java.util.Scanner;
 
-public class ManagerViewRu extends ManagerView {
+public class ManagerViewRu extends ManagerViewEn {
     Manager manager;
     ManagerController managerController;
 
-    public ManagerView(Manager manager, ManagerController managerController) {
+    public ManagerViewRu(Manager manager, ManagerController managerController) {
         this.manager = manager;
         this.managerController = managerController;
     }
