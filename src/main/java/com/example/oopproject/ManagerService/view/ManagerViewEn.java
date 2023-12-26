@@ -10,11 +10,11 @@ import com.example.oopproject.StudentService.enums.Faculty;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-public class ManagerView {
+public class ManagerViewEn {
     Manager manager;
     ManagerController managerController;
     Scanner sc ;
-    public ManagerView(Manager manager, ManagerController managerController) {
+    public ManagerViewEn(Manager manager, ManagerController managerController) {
         super();
         this.manager = manager;
         this.managerController = managerController;
