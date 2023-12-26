@@ -12,12 +12,12 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Vector;
 
-public class TeacherView {
+public class TeacherViewEn {
     protected Teacher teacher;
     protected TeacherController teacherController;
 
 
-    public TeacherView(Teacher teacher, TeacherController teacherController) {
+    public TeacherViewEn(Teacher teacher, TeacherController teacherController) {
         this.teacher = teacher;
         this.teacherController = teacherController;
     }
