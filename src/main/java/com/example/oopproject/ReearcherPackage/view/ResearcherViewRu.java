@@ -8,27 +8,23 @@ import com.example.oopproject.ResearcherPackage.model.Researcher;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class ResearcherViewEn {
-    private final ResearcherController researcherController;
-    private final Scanner scanner;
-    private Researcher researcher;
+public class ResearcherViewRu extends   ResearcherViewEn{
+   
 
-    public ResearcherViewEn(ResearcherController researcherController, Researcher researcher) {
-        this.researcherController = researcherController;
-        scanner = new Scanner(System.in);
-        this.researcher = researcher;
+    public ResearcherViewRu(ResearcherController researcherController, Researcher researcher) {
+        super(researcherController,researcher);
     }
 
     public void getDefaultView() {
-       System.out.println("«Добро пожаловать в Исследовательскую систему»");
-         System.out.println("1. Опубликовать статью");
-         System.out.println("2. Удалить бумагу");
-         System.out.println("3. Распечатать документы");
-         System.out.println("4. Рассчитать H-индекс");
+        System.out.println("«Добро пожаловать в Исследовательскую систему»");
+        System.out.println("1. Опубликовать статью");
+        System.out.println("2. Удалить бумагу");
+        System.out.println("3. Распечатать документы");
+        System.out.println("4. Рассчитать H-индекс");
 
         System.out.print("Выберите опцию: ");
         int option = scanner.nextInt();
-        scanner.nextLine(); 
+        scanner.nextLine();
 
         switch (option) {
             case 1:
@@ -37,10 +33,10 @@ public class ResearcherViewEn {
                 researcherController.publishPaper(new ResearchPaper(title));
                 break;
             case 2:
-              
+
                 break;
             case 3:
-              
+
                 break;
             case 4:
                 int hIndex = researcherController.calculateHIndex();
