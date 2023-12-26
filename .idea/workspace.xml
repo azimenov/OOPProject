@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a90a74be-22a6-4b8e-94d5-afef4476917a" name="Changes" comment="managerController">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/AdminService/view/AdminView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/Factory/UserViewFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/AdminService/view/AdminView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/AdminService/view/AdminViewEn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/Factory/UserViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/Factory/UserViewFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ReearcherPackage/controler/ResearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/ReearcherPackage/controler/ResearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherService/view/TeacherView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/TeacherService/view/TeacherView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/db/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oopproject/UserPackage/TeacherViewFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <workItem from="1702535554407" duration="34000" />
       <workItem from="1702566229708" duration="21955000" />
       <workItem from="1703165884392" duration="37498000" />
-      <workItem from="1703522857446" duration="14580000" />
+      <workItem from="1703522857446" duration="15337000" />
     </task>
     <task id="LOCAL-00001" summary="User Commit">
       <option name="closed" value="true" />
@@ -254,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703578130081</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="managerController">
+      <option name="closed" value="true" />
+      <created>1703582966643</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1703582966643</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

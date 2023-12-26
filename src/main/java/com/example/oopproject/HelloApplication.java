@@ -20,7 +20,7 @@ import com.example.oopproject.TeacherService.Teacher;
 import com.example.oopproject.TeacherService.TeacherType;
 import com.example.oopproject.TeacherService.controller.TeacherController;
 import com.example.oopproject.TeacherService.repository.TeacherRepositoryImpl;
-import com.example.oopproject.TeacherService.view.TeacherView;
+import com.example.oopproject.UserPackage.TeacherViewFactory;
 import com.example.oopproject.UserPackage.User;
 import com.example.oopproject.UserPackage.enums.FamilyStatus;
 import com.example.oopproject.UserPackage.enums.Gender;
@@ -83,8 +83,11 @@ public class HelloApplication {
                 }
                 else if(user instanceof Teacher && option.equals("Teacher")){
                     Teacher teacher = (Teacher) user;
-                    TeacherView view = new TeacherView(teacher, new TeacherController(new EmployeeRepositoryImpl(db), new TeacherRepositoryImpl(db)));
-                    view.getView();
+                    System.out.print("1.English\n2.Russian\n3.Kazakh");
+                    int language = sc.nextInt();
+                    TeacherViewFactory teacherViewFactory = new TeacherViewFactory();
+                    teacherViewFactory.getView(language, teacher, new TeacherController(new EmployeeRepositoryImpl(db), new TeacherRepositoryImpl(db))).getView();
+
                 }
                 else if(user instanceof Manager && option.equals("M")){
                     Manager manager = (Manager) user;
