@@ -11,15 +11,28 @@ import com.example.oopproject.StudentService.model.Major;
 
 import java.util.Scanner;
 
+/**
+ * ManagerViewKz class extends ManagerViewEn and represents the Manager's view in Kazakh language.
+ */
 public class ManagerViewKz extends ManagerViewEn {
-    Manager manager;
-    ManagerController managerController;
 
+    /**
+     * Constructor for ManagerViewKz class.
+     * Initializes the Manager and ManagerController by calling the super constructor from the base class.
+     * @param manager The Manager instance to be initialized.
+     * @param managerController The ManagerController instance to be initialized.
+     */
     public ManagerViewKz(Manager manager, ManagerController managerController) {
-        this.manager = manager;
-        this.managerController = managerController;
+        super(manager, managerController);
     }
 
+
+
+    /**
+     * Displays the default view menu in Kazakh for the Manager.
+     * Options include seeing messages, sending messages, registering students for courses, assigning courses to teachers, etc.
+     * Uses Scanner to get user input for selecting options.
+     */
     public void getDefaultView() {
         System.out.println("Системаға қош келдіңіз\n1.Хабарламаларды көру\n2.Барлық хабарламаларды көру\n3.Хабар жіберу\n4.Оқушыны курстарға тіркеу\n5.Курс оқытушысына курс тағайындау\n6.Курсты ашу");
         Scanner sc = new Scanner(System.in);
@@ -41,42 +54,62 @@ public class ManagerViewKz extends ManagerViewEn {
         }
     }
 
+    /**
+     * Registers a student for a course as initiated by the Manager in Kazakh language.
+     * Prompts for student email, course name, and group number using Scanner.
+     * Calls the ManagerController to register the student for the specified course.
+     */
     void registerStudent() {
         managerController.registerStudentForCourse();
     }
 
+    /**
+     * Assigns a course to a teacher as initiated by the Manager in Kazakh language.
+     * Prompts for teacher email, course name, and group number using Scanner.
+     * Uses the ManagerController to assign the specified course to the teacher.
+     */
     void assignCourseToTeacher() {
         managerController.assignCourseToTeacher();
     }
 
+    /**
+     * Creates a course within the system as initiated by the Manager in Kazakh language.
+     * Collects input for course details such as name, ID, credits, major, and number of students using Scanner.
+     * Utilizes the ManagerController to activate the course in the system.
+     */
     void createCourse() {
         managerController.activateCourse();
     }
 
-    public void registerStudentForCourse() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Оқушының электронды пошта мекенжайын енгізіңіз:");
-        String email = scanner.nextLine();
-        System.out.println("Курстың атын енгізіңіз:");
-        String courseName = scanner.nextLine();
-        System.out.println("Топ номерін енгізіңіз:");
-        int groupNumber = scanner.nextInt();
-
+    /**
+     * Registers a student for a course as initiated by the Manager in Kazakh language.
+     * Prompts for student email, course name, and group number using Scanner.
+     * Calls the ManagerController to register the student for the specified course.
+     * @param email The email of the student.
+     * @param courseName The name of the course.
+     * @param groupNumber The group number of the course.
+     */
+    public void registerStudentForCourse(String email, String courseName, int groupNumber) {
         managerController.registerStudentForCourse(email, courseName, groupNumber);
     }
 
-    public void assignCourseToTeacher() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Оқытушының электронды пошта мекенжайын енгізіңіз:");
-        String email = scanner.nextLine();
-        System.out.println("Курстың атын енгізіңіз:");
-        String courseName = scanner.nextLine();
-        System.out.println("Топ номерін енгізіңіз:");
-        int groupNumber = scanner.nextInt();
-
+    /**
+     * Assigns a course to a teacher as initiated by the Manager in Kazakh language.
+     * Prompts for teacher email, course name, and group number using Scanner.
+     * Uses the ManagerController to assign the specified course to the teacher.
+     * @param email The email of the teacher.
+     * @param courseName The name of the course.
+     * @param groupNumber The group number of the course.
+     */
+    public void assignCourseToTeacher(String email, String courseName, int groupNumber) {
         managerController.assignCourseToTeacher(email, courseName, groupNumber);
     }
 
+    /**
+     * Opens a course within the system as initiated by the Manager in Kazakh language.
+     * Collects input for course details such as name, ID, credits, major, and number of students using Scanner.
+     * Utilizes the ManagerController to activate the course in the system.
+     */
     public void openCourse() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Курстың атын енгізіңіз:");
@@ -106,3 +139,4 @@ public class ManagerViewKz extends ManagerViewEn {
         System.out.println("Курс ашылды: " + courseName);
     }
 }
+
