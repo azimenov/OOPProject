@@ -10,7 +10,7 @@ public class AdminViewEn {
     private Admin admin;
 
     public void getView(){
-        System.out.print("Welcome to system\n 1.Add user\n2. Remove user\n3.Update");
+        System.out.print("Добро пожаловать в систему\n 1.Добавить пользователя\n2. Удалить пользователя\n3.Обновить");
 
     }
 
