@@ -49,10 +49,11 @@ public class HelloApplication {
         adminController.addUser(new Bachelor("22B040394",  "qwerty123", "Alina", "Dumanova", "+77077146503", Gender.Female, FamilyStatus.not_married, Role.Bachelor, Faculty.FIT, 2));
         adminController.addUser(new Bachelor("22B324567",  "qwerty123", "Nursultan", "Mukhambetkaliev", "+77077146503", Gender.Male, FamilyStatus.not_married, Role.Bachelor, Faculty.SEPI, 2));
 
-        adminController.addUser(new Teacher(UUID.randomUUID().toString(),  "qwerty123", "Pakizar", "Shamoi", "+77077146503", Gender.Female, FamilyStatus.married, Role.Teacher, 100000, db, TeacherType.LECTURE));
-        adminController.addUser(new Teacher(UUID.randomUUID().toString(),  "qwerty123", "Nariman", "Ganiev", "+77077146503", Gender.Male, FamilyStatus.not_married, Role.Teacher, 100000, db, TeacherType.TUTOR));
+        adminController.addUser(new Teacher(UUID.randomUUID().toString(),  "qwerty123", "Pakizar", "Shamoi", "+77077146503", Gender.Female, FamilyStatus.married, Role.Teacher, 100000,  TeacherType.LECTURE));
+        adminController.addUser(new Teacher(UUID.randomUUID().toString(),  "qwerty123", "Nariman", "Ganiev", "+77077146503", Gender.Male, FamilyStatus.not_married, Role.Teacher, 100000,  TeacherType.TUTOR));
 
         adminController.addUser(new Bachelor(UUID.randomUUID().toString(),  "qwerty123", "Nariman", "Ganiev", "+77077146503", Gender.Male, FamilyStatus.not_married, Role.Bachelor, Faculty.SEPI, 2));
+        adminController.addUser(new Manager(UUID.randomUUID().toString(),  "qwerty123", "Barak", "Obama", "+77077146503", Gender.Male, FamilyStatus.not_married, Role.Manager, 100000));
         Scanner sc = new Scanner(System.in);
         while (true){
             System.out.println("Write email: ");
@@ -79,10 +80,10 @@ public class HelloApplication {
                     TeacherView view = new TeacherView(teacher, new TeacherController(new EmployeeRepositoryImpl(db), new TeacherRepositoryImpl(db)));
                     view.getView();
                 }
-                else if(user instanceof Manager && option.equals("Manager")){
+                else if(user instanceof Manager && option.equals("M")){
                     Manager manager = (Manager) user;
                     ManagerView view = new ManagerView(manager, new ManagerController(new EmployeeRepositoryImpl(db), new StudentRepositoryImpl(db), new CourseRepositoryImpl(db), new TeacherRepositoryImpl(db)));
-
+                    view.getView();
                 }
             }
         }

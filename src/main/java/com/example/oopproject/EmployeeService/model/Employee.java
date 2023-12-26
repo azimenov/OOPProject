@@ -12,13 +12,11 @@ import java.util.*;
 public abstract class Employee extends User implements Serializable {
     protected int salary;
     protected Set<Message> messages;
-    protected DataBase dataBase;
 
-    public Employee(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, int salary, DataBase dataBase) {
+    public Employee(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, int salary) {
         super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role);
         this.salary = salary;
         messages = new HashSet<>();
-        this.dataBase = dataBase;
     }
 
     public int getSalary() {

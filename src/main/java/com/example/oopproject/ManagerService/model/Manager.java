@@ -15,8 +15,8 @@ public class Manager extends Employee implements Serializable {
 	protected List<Message> requests;
 	protected News newsManager;
 
-    public Manager(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, int salary, DataBase dataBase) {
-        super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role, salary, dataBase);
+    public Manager(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, int salary) {
+        super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role, salary);
     }
 
     @Override

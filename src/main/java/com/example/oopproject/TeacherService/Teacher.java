@@ -16,8 +16,8 @@ public class Teacher extends Employee implements Serializable {
     private TeacherType teacherType;
     private Vector<Group> groups;
 
-    public Teacher(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, int salary, DataBase dataBase, TeacherType teacherType) {
-        super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role, salary, dataBase);
+    public Teacher(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role, int salary, TeacherType teacherType) {
+        super(id, password, firstName, lastName, phoneNumber, gender, familyStatus, role, salary);
         this.teacherType = teacherType;
         groups = new Vector<>();
     }

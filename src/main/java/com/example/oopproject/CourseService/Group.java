@@ -9,14 +9,25 @@ public class Group {
     private Teacher teacher;
     private Vector<Student> students;
     private Course course;
-
-    public Group(Teacher teacher, Vector<Student> students, Course course) {
-        this.teacher = teacher;
-        this.students = students;
+    private int groupNumber;
+    public Group(){
+        students = new Vector<>();
+    }
+    public Group(Course course, int groupNumber){
         this.course = course;
+        this.groupNumber = groupNumber;
+        students = new Vector<Student>();
+
+    }
+    public Group(Teacher teacher, Vector<Student> students, Course course, int groupNumber) {
+        this.students = students;
+        this.teacher = teacher;
+        this.course = course;
+        this.groupNumber = groupNumber;
     }
     public void addStudent(Student student){
         students.add(student);
+        student.addGroup(this);
     }
     public Teacher getTeacher() {
         return teacher;
@@ -41,5 +52,13 @@ public class Group {
 
     public Vector<Student> getStudents() {
         return students;
+    }
+
+    public int getGroupNumber() {
+        return groupNumber;
+    }
+
+    public void setGroupNumber(int groupNumber) {
+        this.groupNumber = groupNumber;
     }
 }

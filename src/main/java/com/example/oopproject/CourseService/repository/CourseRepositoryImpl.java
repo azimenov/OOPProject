@@ -12,6 +12,7 @@ public class CourseRepositoryImpl implements CourseRepository{
     @Override
     public void openCourse(ActivatedCourses course) {
         dataBase.getEnrolledCourses().add(course);
+        dataBase.getCourses().add(course.getCourse());
     }
 
     @Override
@@ -26,6 +27,9 @@ public class CourseRepositoryImpl implements CourseRepository{
 
     @Override
     public ActivatedCourses findActivatedCourseByCourseName(String name) {
-        return (ActivatedCourses) dataBase.getEnrolledCourses().stream().filter(activatedCourses -> activatedCourses.getCourse().getName().equals(name));
+        for(ActivatedCourses activatedCourses: dataBase.getEnrolledCourses()){
+            if(activatedCourses.getCourse().getName().equals(name)) return activatedCourses;
+        }
+        return  null;
     }
 }

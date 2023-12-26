@@ -8,11 +8,6 @@ public class Course {
     private String courseId;
     private int credits;
 
-
-    public Course(String name, String courseId){
-        this.name = name;
-        this.courseId= courseId;
-    }
     public Course(String name, String courseId, int credits) {
         this.name = name;
         this.courseId = courseId;

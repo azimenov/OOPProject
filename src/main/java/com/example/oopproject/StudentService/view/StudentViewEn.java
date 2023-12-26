@@ -48,7 +48,7 @@ public class StudentViewEn {
 
     public void viewInfoAboutTeacher() {
         System.out.print("Enter course name: ");
-        String courseName = scanner.nextLine();
+        String courseName = scanner.next();
 
         String teacherInfo = studentController.viewInfoAboutTeacher(student, courseName);
         if (teacherInfo != null) {

@@ -74,6 +74,8 @@ public class TeacherView {
         for (String course : teacherController.getAllCourses(teacher)) {
             System.out.println(course);
         }
+
+
     }
 
 

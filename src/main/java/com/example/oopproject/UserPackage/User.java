@@ -20,7 +20,6 @@ public abstract class User implements Serializable{
     protected Gender gender;
     protected FamilyStatus familyStatus;
     protected Role role;
-    protected DataBase db;
 
     public User(String id, String password, String firstName, String lastName, String phoneNumber, Gender gender, FamilyStatus familyStatus, Role role) {
         sc = new Scanner(System.in);

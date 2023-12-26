@@ -1,5 +1,7 @@
 package com.example.oopproject.ManagerService.view;
 
+import com.example.oopproject.CourseService.ActivatedCourses;
+import com.example.oopproject.CourseService.Course;
 import com.example.oopproject.EmployeeService.model.Message;
 import com.example.oopproject.ManagerService.controller.ManagerController;
 import com.example.oopproject.ManagerService.model.Manager;
@@ -71,9 +73,9 @@ public class ManagerView {
     }
     public void registerStudentForCourse() {
         System.out.println("Enter student email:");
-        String email = sc.nextLine();
+        String email = sc.next();
         System.out.println("Enter course name:");
-        String courseName = sc.nextLine();
+        String courseName = sc.next();
         System.out.println("Enter group number:");
         int groupNumber = sc.nextInt();
 
@@ -83,9 +85,9 @@ public class ManagerView {
 
     public void assignCourseToTeacher() {
         System.out.println("Enter teacher email:");
-        String email = sc.nextLine();
+        String email = sc.next();
         System.out.println("Enter course name:");
-        String courseName = sc.nextLine();
+                String courseName = sc.next();
         System.out.println("Enter group number:");
         int groupNumber = sc.nextInt();
 
@@ -95,10 +97,10 @@ public class ManagerView {
 
     public void openCourse() {
         System.out.println("Enter course name:");
-        String courseName = sc.nextLine();
+        String courseName = sc.next();
 
         System.out.println("Enter course ID:");
-        String courseId = sc.nextLine();
+        String courseId = sc.next();
 
         System.out.println("Enter course credits:");
         int credits = sc.nextInt();
@@ -106,7 +108,7 @@ public class ManagerView {
 
         System.out.println("Enter course major:");
         System.out.println("Available majors: FIT, BS, KMA, SEPI, SG");
-        String majorInput = sc.nextLine();
+        String majorInput = sc.next();
 
         Faculty faculty;
         try {
@@ -116,14 +118,9 @@ public class ManagerView {
             return;
         }
 
-        Faculty major ;
-        try {
-            major = Faculty.valueOf(majorInput);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Invalid major input!");
-            return;
-        }
-
+        System.out.print("Enter number: ");
+        int number = sc.nextInt();
+        managerController.activateCourse(new ActivatedCourses(new Course(courseName, courseId, credits), number));
         System.out.println("Course opened: " + courseName);
         getView();
     }
