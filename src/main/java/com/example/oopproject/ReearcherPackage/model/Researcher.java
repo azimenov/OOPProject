@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Comparator;
 
-class Researcher extends User {
+public class Researcher extends User {
     private String name;
     private ResearchProject project;
     private List<ResearchPaper> publications;

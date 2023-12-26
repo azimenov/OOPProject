@@ -40,20 +40,22 @@ public class TeacherView {
             seeStudents();
         }
     }
-    public void seeMessages(){
-        for(Message message: teacherController.getUnreadMessages(teacher)){
-            System.out.println(message);
-        }
-        getView();
-    }
-    public void seeUnreadMessages(){
-        for(Message message: teacherController.getAllMessages(teacher)){
+
+    public void seeMessages() {
+        for (Message message : teacherController.getUnreadMessages(teacher)) {
             System.out.println(message);
         }
         getView();
     }
 
-    public void sendMessage(){
+    public void seeUnreadMessages() {
+        for (Message message : teacherController.getAllMessages(teacher)) {
+            System.out.println(message);
+        }
+        getView();
+    }
+
+    public void sendMessage() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Write email: ");
         String email = sc.next();
@@ -69,15 +71,15 @@ public class TeacherView {
         teacherController.sendMessage(new Message(theme, text, sender, false, LocalDateTime.now()), email);
         getView();
     }
+
     public void seeCourses() {
         System.out.println("Courses taught by the teacher:");
         for (String course : teacherController.getAllCourses(teacher)) {
             System.out.println(course);
         }
 
-
+        getView();
     }
-
 
 
     public void seeStudents() {

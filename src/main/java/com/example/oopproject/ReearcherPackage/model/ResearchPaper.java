@@ -3,7 +3,7 @@ package com.example.oopproject.ReearcherPackage.model;
 import com.example.oopproject.ReearcherPackage.model.Format;
 
 
-class ResearchPaper {
+public class ResearchPaper {
     private String title;
     private String theme;
     private String fieldOfStudy;

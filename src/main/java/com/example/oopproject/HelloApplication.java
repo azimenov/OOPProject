@@ -28,14 +28,16 @@ import com.example.oopproject.UserPackage.enums.Role;
 import com.example.oopproject.db.DataBase;
 import com.example.oopproject.AdminService.model.Admin;
 
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.UUID;
 import java.util.Vector;
 
 public class HelloApplication {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
         DataBase db = new DataBase();
+        DataBase.deserialize();
         Admin admin = new Admin();
         AdminController adminController = new AdminController(new AdminRepositoryImpl(db));
 
@@ -60,6 +62,10 @@ public class HelloApplication {
             String email = sc.next();
             System.out.println("Write password: ");
             String password = sc.next();
+            if (password.equals("0")){
+                db.serialize();
+                break;
+            }
 
             Vector<User> roles = db.userLogIn(email, password);
             System.out.println("Your roles: ");

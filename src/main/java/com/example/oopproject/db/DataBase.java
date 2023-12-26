@@ -54,7 +54,7 @@ public class DataBase implements Serializable {
 
 
 
-    private static DataBase deserialize() throws IOException, ClassNotFoundException {
+    public static DataBase deserialize() throws IOException, ClassNotFoundException {
         FileInputStream fileInputStream = new FileInputStream("localDb.txt");
         ObjectInputStream inputStream = new ObjectInputStream(fileInputStream);
         Object db = inputStream.readObject();
