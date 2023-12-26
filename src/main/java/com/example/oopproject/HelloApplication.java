@@ -76,11 +76,18 @@ public class HelloApplication {
 
             String option = sc.next();
             for(User user: roles){
-                if(user instanceof Bachelor && option.equals("Bachelor")){
-                    Bachelor bachelor = (Bachelor)user;
-                    StudentViewEn studentView = new StudentViewEn(new StudentController(new StudentRepositoryImpl(db)), bachelor);
+                if(user instanceof Bachelor && option.equals("Bachelor")) {
+                    Bachelor bachelor = (Bachelor) user;
+
+                    System.out.print("1.English\n2.Russian\n3.Kazakh");
+                    int language = sc.nextInt();
+
+                    StudentViewFactory studentViewFactory = new StudentViewFactory();
+                    StudentView studentView = studentViewFactory.getView(language, bachelor, new StudentController(new StudentRepositoryImpl(db)));
                     studentView.getDefaultView();
                 }
+
+            }
                 else if(user instanceof Teacher && option.equals("Teacher")){
                     Teacher teacher = (Teacher) user;
                     System.out.print("1.English\n2.Russian\n3.Kazakh");
