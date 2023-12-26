@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class ResearcherViewKz extends ResearcherViewEn {
 
-    public ResearcherViewEn(ResearcherController researcherController, Researcher researcher) {
+    public ResearcherViewKz(ResearcherController researcherController, Researcher researcher) {
         super(researcherController,researcher);
     }
 
