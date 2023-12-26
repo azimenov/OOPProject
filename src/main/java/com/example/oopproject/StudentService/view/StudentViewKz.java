@@ -8,15 +8,10 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Vector;
 
-public class StudentViewKz {
-    private final StudentController studentController;
-    private Student student;
-    private final Scanner scanner;
+public class StudentViewKz extends StudentViewEn{
 
     public StudentViewKz(StudentController studentController, Student student) {
-        this.studentController = studentController;
-        this.student = student;
-        scanner = new Scanner(System.in);
+        super(studentController, student);
     }
 
     private void displayKazakhView() {

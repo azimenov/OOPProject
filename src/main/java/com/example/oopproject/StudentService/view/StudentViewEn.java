@@ -9,9 +9,9 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class StudentViewEn {
-    private final StudentController studentController;
-    private final Scanner scanner;
-    private Student student;
+    protected final StudentController studentController;
+    protected final Scanner scanner;
+    protected Student student;
 
     public StudentViewEn(StudentController studentController, Student student) {
         this.studentController = studentController;
