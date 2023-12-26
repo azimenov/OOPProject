@@ -15,7 +15,7 @@ public class ManagerViewKz extends ManagerViewEn {
     Manager manager;
     ManagerController managerController;
 
-    public ManagerView(Manager manager, ManagerController managerController) {
+    public ManagerViewKz(Manager manager, ManagerController managerController) {
         this.manager = manager;
         this.managerController = managerController;
     }
