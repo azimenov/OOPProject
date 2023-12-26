@@ -7,17 +7,20 @@ import com.example.oopproject.ResearcherPackage.model.Researcher;
 import java.util.Comparator;
 import java.util.Scanner;
 
+// Represents the view for a Researcher in English
 public class ResearcherViewEn {
-    private final ResearcherController researcherController;
-    private final Scanner scanner;
-    private Researcher researcher;
+    private final ResearcherController researcherController; // Controller handling researcher actions
+    private final Scanner scanner; // Scanner for user input
+    private Researcher researcher; // Researcher associated with this view
 
+    // Constructor to initialize ResearcherViewEn
     public ResearcherViewEn(ResearcherController researcherController, Researcher researcher) {
         this.researcherController = researcherController;
         scanner = new Scanner(System.in);
         this.researcher = researcher;
     }
 
+    // Method to display the default view for a researcher
     public void getDefaultView() {
         System.out.println("Welcome to Researcher System");
         System.out.println("1. Publish Paper");
@@ -27,7 +30,7 @@ public class ResearcherViewEn {
 
         System.out.print("Select option: ");
         int option = scanner.nextInt();
-        scanner.nextLine(); 
+        scanner.nextLine(); // Consumes the newline character after reading the integer input
 
         switch (option) {
             case 1:
@@ -36,10 +39,10 @@ public class ResearcherViewEn {
                 researcherController.publishPaper(new ResearchPaper(title));
                 break;
             case 2:
-              
+                // Code to delete a paper
                 break;
             case 3:
-              
+                // Code to print papers
                 break;
             case 4:
                 int hIndex = researcherController.calculateHIndex();
@@ -50,3 +53,4 @@ public class ResearcherViewEn {
         }
     }
 }
+
