@@ -1,6 +1,6 @@
 package com.example.oopproject.TeacherService.view;
 
-import com.example.oopproject.EmployeeService.model.Message;
+import com.example.oopproject.EmployeeService.view.Message;
 import com.example.oopproject.StudentService.enums.Semester;
 import com.example.oopproject.StudentService.model.Mark;
 import com.example.oopproject.StudentService.model.Student;
@@ -12,18 +12,14 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Vector;
 
-public class TeacherView {
-    protected Teacher teacher;
-    protected TeacherController teacherController;
+public class TeacherViewRu extends TeacherViewEn  {
 
-
-    public TeacherView(Teacher teacher, TeacherController teacherController) {
-        this.teacher = teacher;
-        this.teacherController = teacherController;
+    public TeacherViewRu(Teacher teacher, TeacherController teacherController) {
+        super(teacher,teacherController);
     }
 
     public void getView() {
-        System.out.println("Welcome to system\n1.See messages\n2.See all messages\n3.Send Messages\n4.View Courses\n5.View students\n6.Put Marks");
+        System.out.println("Добро пожаловать в систему\n1.Просмотр сообщения\n2.Просмотр всех сообщений\n3.Отправить сообщение\n4.Просмотр предметов\n5.Просмотр студентов \n6.Выставление оценок");
         Scanner sc = new Scanner(System.in);
 
         int option = sc.nextInt();
@@ -40,46 +36,42 @@ public class TeacherView {
             seeStudents();
         }
     }
-
-    public void seeMessages() {
-        for (Message message : teacherController.getUnreadMessages(teacher)) {
+    public void seeMessages(){
+        for(Message message: teacherController.getUnreadMessages(teacher)){
+            System.out.println(message);
+        }
+        getView();
+    }
+    public void seeUnreadMessages(){
+        for(Message message: teacherController.getAllMessages(teacher)){
             System.out.println(message);
         }
         getView();
     }
 
-    public void seeUnreadMessages() {
-        for (Message message : teacherController.getAllMessages(teacher)) {
-            System.out.println(message);
-        }
-        getView();
-    }
-
-    public void sendMessage() {
+    public void sendMessage(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Write email: ");
+        System.out.println("Введите Email: ");
         String email = sc.next();
-        System.out.println("Enter message theme:");
+        System.out.println("Введите сообщение здесь:");
         String theme = sc.next();
 
-        System.out.println("Enter message text:");
+            System.out.println("Введите текстовое сообщение:");
         String text = sc.next();
 
-        System.out.println("Enter your email:");
+        System.out.println("Введите Email:");
         String sender = sc.next();
 
         teacherController.sendMessage(new Message(theme, text, sender, false, LocalDateTime.now()), email);
         getView();
     }
-
     public void seeCourses() {
-        System.out.println("Courses taught by the teacher:");
+        System.out.println("Предметы, проводимые учителем:");
         for (String course : teacherController.getAllCourses(teacher)) {
             System.out.println(course);
         }
-
-        getView();
     }
+
 
 
     public void seeStudents() {
@@ -88,10 +80,10 @@ public class TeacherView {
         for (Map.Entry<String, Vector<Student>> entry : studentsByCourse.entrySet()) {
             String courseName = entry.getKey();
             Vector<Student> students = entry.getValue();
-            System.out.println("Course: " + courseName);
+            System.out.println("Предмет: " + courseName);
 
             for (Student student : students) {
-                System.out.println("Student ID: " + student.getId() + ", Name: " + student.getEmail());
+                System.out.println("ID Студента: " + student.getId() + ", Имя: " + student.getEmail());
                 // Дополнительная информация о студенте, если нужно        }
                 System.out.println();
             }
@@ -100,17 +92,17 @@ public class TeacherView {
 
     public void putMarks() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter student's email:");
+        System.out.println("Введите email студента:");
         String email = scanner.nextLine();
-        System.out.println("Enter course name:");
+        System.out.println("Введите название дисциплины:");
         String courseName = scanner.nextLine();
-        System.out.println("Enter attestation 1 mark:");
+        System.out.println("Оценка первой аттестации:");
         double attestation1 = Double.parseDouble(scanner.nextLine());
-        System.out.println("Enter attestation 2 mark:");
+        System.out.println("Оценка второй аттестации:");
         double attestation2 = Double.parseDouble(scanner.nextLine());
-        System.out.println("Enter final exam mark:");
+        System.out.println("Оценка финального экзамен:");
         double finalExam = Double.parseDouble(scanner.nextLine());
-        System.out.println("Enter semester (SEMESTER_1, SEMESTER_2, etc.):");
+        System.out.println("Введите семестр (СЕМЕСТР_1, СЕМЕСТР_2, т.б):");
         Semester semester = Semester.valueOf(scanner.nextLine().toUpperCase());
         teacherController.setMark(teacher, email, new Mark(courseName, attestation1, attestation2, finalExam, semester));
     }

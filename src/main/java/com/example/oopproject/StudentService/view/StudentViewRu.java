@@ -8,14 +8,9 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Vector;
 
-public class StudentViewRu {
-    private final StudentController studentController;
-    private final Scanner scanner;
-    private Student student;
-
-    public StudentViewRu(StudentController studentController, Scanner scanner) {
-        this.studentController = studentController;
-        this.scanner = scanner;
+public class StudentViewRu extends StudentViewEn {
+    public StudentViewRu(StudentController studentController, Student student) {
+        super(studentController, student );
     }
 
      private void displayRussianView() {
