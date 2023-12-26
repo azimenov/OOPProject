@@ -12,16 +12,26 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Vector;
 
+/**
+ * Represents the view of a Teacher in the system with English language settings.
+ */
 public class TeacherViewEn {
     protected Teacher teacher;
     protected TeacherController teacherController;
 
-
+    /**
+     * Constructs a TeacherViewEn object with the provided Teacher and TeacherController instances.
+     * @param teacher The Teacher instance.
+     * @param teacherController The TeacherController instance.
+     */
     public TeacherViewEn(Teacher teacher, TeacherController teacherController) {
         this.teacher = teacher;
         this.teacherController = teacherController;
     }
 
+    /**
+     * Displays the main menu for the Teacher view and performs actions based on user input.
+     */
     public void getView() {
         System.out.println("Welcome to system\n1.See messages\n2.See all messages\n3.Send Messages\n4.View Courses\n5.View students\n6.Put Marks");
         Scanner sc = new Scanner(System.in);
@@ -38,9 +48,14 @@ public class TeacherViewEn {
             seeCourses();
         } else if (option == 5) {
             seeStudents();
+        } else if (option == 6) {
+            putMarks();
         }
     }
 
+    /**
+     * Displays unread messages for the Teacher.
+     */
     public void seeMessages() {
         for (Message message : teacherController.getUnreadMessages(teacher)) {
             System.out.println(message);
@@ -48,6 +63,9 @@ public class TeacherViewEn {
         getView();
     }
 
+    /**
+     * Displays all messages for the Teacher, including read and unread messages.
+     */
     public void seeUnreadMessages() {
         for (Message message : teacherController.getAllMessages(teacher)) {
             System.out.println(message);
@@ -55,6 +73,9 @@ public class TeacherViewEn {
         getView();
     }
 
+    /**
+     * Composes and sends a message initiated by the Teacher.
+     */
     public void sendMessage() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Write email: ");
@@ -72,19 +93,23 @@ public class TeacherViewEn {
         getView();
     }
 
+    /**
+     * Displays the courses taught by the Teacher.
+     */
     public void seeCourses() {
         System.out.println("Courses taught by the teacher:");
         for (String course : teacherController.getAllCourses(teacher)) {
             System.out.println(course);
         }
-
         getView();
     }
 
-
+    /**
+     * Displays students enrolled in courses taught by the Teacher.
+     */
     public void seeStudents() {
         Map<String, Vector<Student>> studentsByCourse = teacherController.getAllStudents(teacher);
-        // Вывод студентов по курсам
+        // Display students by courses
         for (Map.Entry<String, Vector<Student>> entry : studentsByCourse.entrySet()) {
             String courseName = entry.getKey();
             Vector<Student> students = entry.getValue();
@@ -92,12 +117,16 @@ public class TeacherViewEn {
 
             for (Student student : students) {
                 System.out.println("Student ID: " + student.getId() + ", Name: " + student.getEmail());
-                // Дополнительная информация о студенте, если нужно        }
-                System.out.println();
+                // Additional student information if needed
             }
+            System.out.println();
         }
+        getView();
     }
 
+    /**
+     * Sets marks for students on various assessments.
+     */
     public void putMarks() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter student's email:");
@@ -113,6 +142,6 @@ public class TeacherViewEn {
         System.out.println("Enter semester (SEMESTER_1, SEMESTER_2, etc.):");
         Semester semester = Semester.valueOf(scanner.nextLine().toUpperCase());
         teacherController.setMark(teacher, email, new Mark(courseName, attestation1, attestation2, finalExam, semester));
+        getView();
     }
-
 }
