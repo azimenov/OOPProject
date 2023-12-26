@@ -12,12 +12,23 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Vector;
 
-public class TeacherViewRu extends TeacherViewEn  {
+/**
+ * Represents the view of a Teacher in the system with Russian language settings.
+ */
+public class TeacherViewRu extends TeacherViewEn {
 
+    /**
+     * Constructs a TeacherViewRu object with the provided Teacher and TeacherController instances.
+     * @param teacher The Teacher instance.
+     * @param teacherController The TeacherController instance.
+     */
     public TeacherViewRu(Teacher teacher, TeacherController teacherController) {
-        super(teacher,teacherController);
+        super(teacher, teacherController);
     }
 
+    /**
+     * Displays the main menu for the Teacher view in Russian and performs actions based on user input.
+     */
     public void getView() {
         System.out.println("Добро пожаловать в систему\n1.Просмотр сообщения\n2.Просмотр всех сообщений\n3.Отправить сообщение\n4.Просмотр предметов\n5.Просмотр студентов \n6.Выставление оценок");
         Scanner sc = new Scanner(System.in);
@@ -36,27 +47,38 @@ public class TeacherViewRu extends TeacherViewEn  {
             seeStudents();
         }
     }
-    public void seeMessages(){
-        for(Message message: teacherController.getUnreadMessages(teacher)){
-            System.out.println(message);
-        }
-        getView();
-    }
-    public void seeUnreadMessages(){
-        for(Message message: teacherController.getAllMessages(teacher)){
+
+    /**
+     * Displays unread messages for the Teacher in Russian language.
+     */
+    public void seeMessages() {
+        for (Message message : teacherController.getUnreadMessages(teacher)) {
             System.out.println(message);
         }
         getView();
     }
 
-    public void sendMessage(){
+    /**
+     * Displays all messages for the Teacher, including read and unread messages in Russian language.
+     */
+    public void seeUnreadMessages() {
+        for (Message message : teacherController.getAllMessages(teacher)) {
+            System.out.println(message);
+        }
+        getView();
+    }
+
+    /**
+     * Composes and sends a message initiated by the Teacher in Russian language.
+     */
+    public void sendMessage() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите Email: ");
         String email = sc.next();
         System.out.println("Введите сообщение здесь:");
         String theme = sc.next();
 
-            System.out.println("Введите текстовое сообщение:");
+        System.out.println("Введите текстовое сообщение:");
         String text = sc.next();
 
         System.out.println("Введите Email:");
@@ -65,6 +87,10 @@ public class TeacherViewRu extends TeacherViewEn  {
         teacherController.sendMessage(new Message(theme, text, sender, false, LocalDateTime.now()), email);
         getView();
     }
+
+    /**
+     * Displays the courses taught by the Teacher in Russian language.
+     */
     public void seeCourses() {
         System.out.println("Предметы, проводимые учителем:");
         for (String course : teacherController.getAllCourses(teacher)) {
@@ -72,8 +98,9 @@ public class TeacherViewRu extends TeacherViewEn  {
         }
     }
 
-
-
+    /**
+     * Displays students enrolled in courses taught by the Teacher in Russian language.
+     */
     public void seeStudents() {
         Map<String, Vector<Student>> studentsByCourse = teacherController.getAllStudents(teacher);
         // Вывод студентов по курсам
@@ -84,12 +111,15 @@ public class TeacherViewRu extends TeacherViewEn  {
 
             for (Student student : students) {
                 System.out.println("ID Студента: " + student.getId() + ", Имя: " + student.getEmail());
-                // Дополнительная информация о студенте, если нужно        }
+                // Дополнительная информация о студенте, если нужно
                 System.out.println();
             }
         }
     }
 
+    /**
+     * Sets marks for students on various assessments in Russian language.
+     */
     public void putMarks() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите email студента:");
@@ -100,11 +130,10 @@ public class TeacherViewRu extends TeacherViewEn  {
         double attestation1 = Double.parseDouble(scanner.nextLine());
         System.out.println("Оценка второй аттестации:");
         double attestation2 = Double.parseDouble(scanner.nextLine());
-        System.out.println("Оценка финального экзамен:");
+        System.out.println("Оценка финального экзамена:");
         double finalExam = Double.parseDouble(scanner.nextLine());
         System.out.println("Введите семестр (СЕМЕСТР_1, СЕМЕСТР_2, т.б):");
         Semester semester = Semester.valueOf(scanner.nextLine().toUpperCase());
         teacherController.setMark(teacher, email, new Mark(courseName, attestation1, attestation2, finalExam, semester));
     }
-
 }
