@@ -7,15 +7,10 @@ import com.example.oopproject.ResearcherPackage.model.Researcher;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class ResearcherViewEn {
-    private final ResearcherController researcherController;
-    private final Scanner scanner;
-    private Researcher researcher;
+public class ResearcherViewKz extends ResearcherViewEn {
 
     public ResearcherViewEn(ResearcherController researcherController, Researcher researcher) {
-        this.researcherController = researcherController;
-        scanner = new Scanner(System.in);
-        this.researcher = researcher;
+        super(researcherController,researcher);
     }
 
     public void getDefaultView() {
